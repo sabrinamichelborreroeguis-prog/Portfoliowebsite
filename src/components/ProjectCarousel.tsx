@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, ReactNode } from 'react';
-import { ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from './ui/button';
 
 interface ProjectCarouselProps {
@@ -9,35 +9,33 @@ interface ProjectCarouselProps {
   onPauseChange?: (paused: boolean) => void;
 }
 
-export function ProjectCarousel({ 
-  children, 
+export function ProjectCarousel({
+  children,
   autoScrollSpeed = 30,
-  isPaused = false,
-  onPauseChange 
+  isPaused = false
 }: ProjectCarouselProps) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number>(0);
   const lastTimeRef = useRef<number>(0);
 
   // Auto-scroll continuo e infinito
   useEffect(() => {
     if (isPaused || !containerRef.current || !contentRef.current) return;
 
-    const container = containerRef.current;
     const content = contentRef.current;
     const maxScroll = content.scrollWidth / 2; // Dividimos entre 2 porque duplicamos el contenido
 
     const animate = (timestamp: number) => {
       if (!lastTimeRef.current) lastTimeRef.current = timestamp;
-      
+
       const deltaTime = timestamp - lastTimeRef.current;
       lastTimeRef.current = timestamp;
 
       // Calcular cuánto desplazar basado en el tiempo transcurrido
       const scrollIncrement = (deltaTime / autoScrollSpeed);
-      
+
       setScrollPosition(prev => {
         const newPosition = prev + scrollIncrement;
         // Loop infinito - cuando llegamos al final del contenido duplicado, volvemos al inicio
@@ -83,11 +81,6 @@ export function ProjectCarousel({
     });
   };
 
-  const togglePause = () => {
-    if (onPauseChange) {
-      onPauseChange(!isPaused);
-    }
-  };
 
   return (
     <div className="relative group">

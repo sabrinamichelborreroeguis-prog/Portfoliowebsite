@@ -29,7 +29,7 @@ interface ProjectDetailModalProps {
 }
 
 export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailModalProps) {
-  const [currentMediaIndex, setCurrentMediaIndex] = useState(0);
+  const [currentMediaIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
 
@@ -131,14 +131,14 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
                 {/* Botones de acción */}
                 <div className="flex flex-wrap gap-4 pt-4">
                   {project.projectUrl && (
-                    <Button 
+                    <Button
                       size="lg"
                       className="bg-[#C3A8FF] hover:bg-[#B59BE5] text-white"
                       asChild
                     >
-                      <a 
-                        href={project.projectUrl} 
-                        target="_blank" 
+                      <a
+                        href={project.projectUrl}
+                        target="_blank"
                         rel="noopener noreferrer"
                       >
                         <Play className="mr-2 h-5 w-5 fill-white" />
@@ -146,8 +146,8 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
                       </a>
                     </Button>
                   )}
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     size="lg"
                     className="border-purple-400/50 hover:bg-purple-500/10"
                     onClick={() => {
@@ -164,8 +164,8 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
                 {/* Tecnologías */}
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, index) => (
-                    <Badge 
-                      key={index} 
+                    <Badge
+                      key={index}
                       variant="outline"
                       className="border-primary/30 text-muted-foreground bg-background/20 backdrop-blur-sm"
                     >
@@ -180,7 +180,7 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
           {/* Sección de detalles adicionales */}
           <div id="project-details" className="relative bg-background px-8 md:px-16 lg:px-24 py-16">
             <div className="max-w-7xl mx-auto space-y-16">
-              
+
               {/* Galería de medios - Layout tipo Netflix */}
               {allMedia.length > 1 && (
                 <div className="space-y-8">
@@ -193,7 +193,7 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
                   <div className="grid grid-cols-12 gap-4 auto-rows-[200px]">
                     {/* Primera imagen - Grande */}
                     {allMedia[0] && (
-                      <div 
+                      <div
                         className="col-span-12 md:col-span-8 row-span-2 relative group cursor-pointer overflow-hidden rounded-xl"
                         onClick={() => openLightbox(0)}
                       >
@@ -213,7 +213,7 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
 
                     {/* Segunda imagen - Vertical */}
                     {allMedia[1] && (
-                      <div 
+                      <div
                         className="col-span-6 md:col-span-4 row-span-2 relative group cursor-pointer overflow-hidden rounded-xl"
                         onClick={() => openLightbox(1)}
                       >
@@ -233,7 +233,7 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
 
                     {/* Tercera imagen - Horizontal */}
                     {allMedia[2] && (
-                      <div 
+                      <div
                         className="col-span-6 md:col-span-5 row-span-1 relative group cursor-pointer overflow-hidden rounded-xl"
                         onClick={() => openLightbox(2)}
                       >
@@ -253,7 +253,7 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
 
                     {/* Cuarta imagen - Cuadrada */}
                     {allMedia[3] && (
-                      <div 
+                      <div
                         className="col-span-6 md:col-span-3 row-span-1 relative group cursor-pointer overflow-hidden rounded-xl"
                         onClick={() => openLightbox(3)}
                       >
@@ -273,7 +273,7 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
 
                     {/* Quinta imagen - Panorámica */}
                     {allMedia[4] && (
-                      <div 
+                      <div
                         className="col-span-12 md:col-span-8 row-span-1 relative group cursor-pointer overflow-hidden rounded-xl"
                         onClick={() => openLightbox(4)}
                       >
@@ -293,7 +293,7 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
 
                     {/* Sexta imagen */}
                     {allMedia[5] && (
-                      <div 
+                      <div
                         className="col-span-12 md:col-span-4 row-span-1 relative group cursor-pointer overflow-hidden rounded-xl"
                         onClick={() => openLightbox(5)}
                       >
@@ -355,7 +355,7 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
                   <h3 className="text-2xl font-bold text-foreground mb-6">Habilidades Aplicadas</h3>
                   <div className="flex flex-wrap gap-3">
                     {project.technologies.map((tech, index) => (
-                      <div 
+                      <div
                         key={index}
                         className="px-4 py-2 rounded-full bg-purple-500/20 border border-purple-400/30 text-foreground hover:bg-purple-500/30 transition-colors"
                       >
@@ -376,14 +376,14 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
                     <p className="text-muted-foreground mb-8">
                       Visita mi perfil de Behance para ver el proyecto completo con todos los detalles y procesos creativos.
                     </p>
-                    <Button 
+                    <Button
                       size="lg"
                       className="bg-[#C3A8FF] hover:bg-[#B59BE5] text-white"
                       asChild
                     >
-                      <a 
-                        href={project.projectUrl} 
-                        target="_blank" 
+                      <a
+                        href={project.projectUrl}
+                        target="_blank"
                         rel="noopener noreferrer"
                       >
                         <ExternalLink className="mr-2 h-5 w-5" />
@@ -400,7 +400,7 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
 
       {/* Lightbox para ver imágenes en grande */}
       {lightboxOpen && (
-        <div 
+        <div
           className="fixed inset-0 z-[100] bg-black/98 backdrop-blur-xl flex items-center justify-center animate-in fade-in duration-300"
           onClick={closeLightbox}
         >
@@ -442,7 +442,7 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
           )}
 
           {/* Imagen en pantalla completa */}
-          <div 
+          <div
             className="relative max-w-7xl max-h-[90vh] mx-auto px-4"
             onClick={(e) => e.stopPropagation()}
           >
@@ -451,7 +451,7 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
               alt={`${project.title} - ${lightboxIndex + 1}`}
               className="max-w-full max-h-[90vh] w-auto h-auto object-contain rounded-lg shadow-2xl"
             />
-            
+
             {/* Contador de imágenes */}
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-purple-500/90 text-white px-4 py-2 rounded-full text-sm backdrop-blur-sm">
               {lightboxIndex + 1} / {allMedia.length}

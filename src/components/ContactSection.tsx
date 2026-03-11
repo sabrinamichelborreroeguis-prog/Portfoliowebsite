@@ -7,9 +7,6 @@ import { Label } from './ui/label';
 import { useState } from 'react';
 
 export function ContactSection() {
-  // Tu número de WhatsApp (formato internacional sin + ni espacios)
-  const whatsappNumber = 'https://wa.link/e53d2b';
-
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -35,11 +32,8 @@ export function ContactSection() {
 *Mensaje:*
 ${formData.message}`;
 
-    // Codificar el mensaje para URL
-    const encodedMessage = encodeURIComponent(whatsappMessage);
-
-    // Abrir WhatsApp con el mensaje prellenado
-    window.open(whatsappNumber, '_blank');
+    // Abrir WhatsApp
+    window.open('https://wa.link/e53d2b', '_blank');
 
     // Opcional: Limpiar el formulario después de enviar
     setFormData({
