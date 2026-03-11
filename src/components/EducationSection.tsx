@@ -96,8 +96,8 @@ export function EducationSection() {
             <div className="text-sm text-muted-foreground">Certificaciones</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">2</div>
-            <div className="text-sm text-muted-foreground">Especializaciones</div>
+            <div className="text-3xl font-bold text-primary mb-2">3+</div>
+            <div className="text-sm text-muted-foreground">Esperiencia labora</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-primary mb-2">100%</div>
