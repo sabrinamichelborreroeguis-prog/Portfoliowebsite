@@ -1,4 +1,4 @@
-import { Code, Smartphone, Palette, Globe, Database, Zap } from 'lucide-react';
+import { Code, Smartphone, Palette, Globe, Database, Zap, Sparkles } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 
 export function ServicesSection() {
@@ -45,9 +45,12 @@ export function ServicesSection() {
     <section id="servicios" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Mis Servicios
-          </h2>
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <Sparkles className="h-8 w-8 text-purple-400" />
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+              Mis Servicios
+            </h2>
+          </div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Ofrezco soluciones tecnológicas completas, desde el diseño hasta la implementación,
             adaptadas a las necesidades específicas de cada proyecto

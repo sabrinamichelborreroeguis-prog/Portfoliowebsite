@@ -9,7 +9,7 @@ import { useState } from 'react';
 export function ContactSection() {
   // Tu número de WhatsApp (formato internacional sin + ni espacios)
   const whatsappNumber = 'https://wa.link/e53d2b';
-  
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,7 +24,7 @@ export function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Construir el mensaje de WhatsApp con todos los datos del formulario
     const whatsappMessage = `Hola! Me contacto desde tu portafolio.
 
@@ -37,11 +37,10 @@ ${formData.message}`;
 
     // Codificar el mensaje para URL
     const encodedMessage = encodeURIComponent(whatsappMessage);
-    
+
     // Abrir WhatsApp con el mensaje prellenado
-    const whatsappUrl = `https://wa.link/e53d2b`;
-    window.open(whatsappUrl, '_blank');
-    
+    window.open(whatsappNumber, '_blank');
+
     // Opcional: Limpiar el formulario después de enviar
     setFormData({
       name: '',
@@ -199,7 +198,7 @@ ${formData.message}`;
                     />
                   </div>
                 </div>
-                
+
                 <div className="space-y-2">
                   <Label htmlFor="subject">Asunto *</Label>
                   <Input
@@ -211,7 +210,7 @@ ${formData.message}`;
                     className="glass-input"
                   />
                 </div>
-                
+
                 <div className="space-y-2">
                   <Label htmlFor="message">Mensaje *</Label>
                   <Textarea
@@ -224,7 +223,7 @@ ${formData.message}`;
                     className="glass-input"
                   />
                 </div>
-                
+
                 <Button type="submit" className="w-full group bg-primary hover:bg-primary/90 text-primary-foreground">
                   Enviar mensaje
                   <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />

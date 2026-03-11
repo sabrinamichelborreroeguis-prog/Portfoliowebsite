@@ -6,15 +6,13 @@ import {
   Mail,
   MessageCircle,
   Play,
-  Info,
 } from "lucide-react";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
-import profileImage from "figma:asset/32204cad6ec5f429b07bf17aaf39dcd3639d7cf7.png";
+import profileImage from "../assets/32204cad6ec5f429b07bf17aaf39dcd3639d7cf7.png";
 
 export function HeroSection() {
   // Configuración de links - Puedes cambiar estos valores
-  const portfolioUrl = "https://www.behance.net/sabrinaborrero"; // Cambia este link a tu portafolio
   const cvUrl = "https://www.canva.com/design/DAFcE0uQVjQ/3EibMhT-um_K_eK6WERiEw/edit?utm_content=DAFcE0uQVjQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton";
   const githubUrl = "https://github.com/tuusuario"; // Tu perfil de GitHub
   const linkedinUrl = "https://www.linkedin.com/in/tuusuario"; // Tu perfil de LinkedIn
@@ -57,15 +55,15 @@ export function HeroSection() {
                 </Badge>
                 <span className="text-sm text-muted-foreground">2025 | Diseño & Creatividad</span>
               </div>
-              
+
               <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight" style={{ fontStyle: 'italic', letterSpacing: '-0.02em' }}>
-                SABRINA 
+                SABRINA
                 <br />
                 <span className="text-gradient-purple">
                   BORRERO EGUIS
                 </span>
               </h1>
-              
+
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <span className="flex items-center gap-1">
                   <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
@@ -79,7 +77,7 @@ export function HeroSection() {
             </div>
 
             <p className="text-base text-muted-foreground max-w-lg leading-relaxed">
-             Creo soluciones digitales funcionales y estéticas, combinando pensamiento estratégico,
+              Creo soluciones digitales funcionales y estéticas, combinando pensamiento estratégico,
               experiencia de usuario y tecnología para optimizar procesos, fortalecer marcas y construir
               productos eficientes, intuitivos y escalables..
             </p>
@@ -89,26 +87,26 @@ export function HeroSection() {
               <Button
                 size="lg"
                 className="group bg-[#C3A8FF] hover:bg-[#B59BE5] text-white"
-                asChild
+                onClick={() => window.location.hash = 'portfolio'}
               >
-                <a 
-                  href={portfolioUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  <Play className="mr-2 h-5 w-5 fill-white" />
-                  Ver Proyectos
-                </a>
+                <Play className="mr-2 h-5 w-5 fill-white" />
+                Ver Portfolio
               </Button>
-              
-              <Button 
-                variant="outline" 
+
+              <Button
+                variant="outline"
                 size="lg"
                 className="border-purple-400/50 hover:bg-purple-500/10"
-                onClick={() => scrollToSection('proyectos')}
+                asChild
               >
-                <Info className="mr-2 h-5 w-5" />
-                Más Info
+                <a
+                  href={cvUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Download className="mr-2 h-5 w-5" />
+                  Descargar CV
+                </a>
               </Button>
             </div>
 
@@ -116,58 +114,58 @@ export function HeroSection() {
             <div className="flex items-center gap-4 pt-4">
               <span className="text-sm text-muted-foreground">Sígueme:</span>
               <div className="flex gap-3">
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
-                  className="p-3 hover:bg-purple-500/20 rounded-full" 
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="p-3 hover:bg-purple-500/20 rounded-full"
                   asChild
                 >
-                  <a 
-                    href={githubUrl} 
-                    target="_blank" 
+                  <a
+                    href={githubUrl}
+                    target="_blank"
                     rel="noopener noreferrer"
                     aria-label="GitHub"
                   >
                     <Github className="h-5 w-5" />
                   </a>
                 </Button>
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
-                  className="p-3 hover:bg-purple-500/20 rounded-full" 
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="p-3 hover:bg-purple-500/20 rounded-full"
                   asChild
                 >
-                  <a 
-                    href={linkedinUrl} 
-                    target="_blank" 
+                  <a
+                    href={linkedinUrl}
+                    target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
                   >
                     <Linkedin className="h-5 w-5" />
                   </a>
                 </Button>
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
-                  className="p-3 hover:bg-purple-500/20 rounded-full" 
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="p-3 hover:bg-purple-500/20 rounded-full"
                   asChild
                 >
-                  <a 
+                  <a
                     href={`mailto:${emailUrl}`}
                     aria-label="Email"
                   >
                     <Mail className="h-5 w-5" />
                   </a>
                 </Button>
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
-                  className="p-3 hover:bg-green-500/20 rounded-full" 
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="p-3 hover:bg-green-500/20 rounded-full"
                   asChild
                 >
-                  <a 
-                    href={whatsappUrl} 
-                    target="_blank" 
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
                     rel="noopener noreferrer"
                     aria-label="WhatsApp"
                   >
@@ -181,36 +179,16 @@ export function HeroSection() {
           {/* Lado derecho - Imagen de perfil estilo cinematográfico */}
           <div className="flex justify-center lg:justify-end relative">
             <div className="relative w-full max-w-md">
-              {/* Imagen principal con border y efectos */}
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border-4 border-purple-500/30 shadow-2xl glow-purple-strong">
+              {/* Imagen principal estéticamente limpia con gradiente suave */}
+              <div className="relative aspect-[3/4] overflow-hidden flex items-end">
                 <img
                   src={profileImage}
                   alt="Sabrina - Diseñadora Creativa"
-                  className="w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover"
                   style={{ objectPosition: 'center 20%' }}
                 />
-                {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/60 via-transparent to-transparent"></div>
-                
-                {/* Info overlay en la parte inferior */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 glass-card border-0 rounded-none">
-                  <h3 className="text-foreground mb-1">Sabrina Borrero</h3>
-                  <p className="text-sm text-muted-foreground mb-3">Diseñadora Creativa</p>
-                  <Button 
-                    size="sm"
-                    className="w-full bg-[#C3A8FF] hover:bg-[#B59BE5] text-white"
-                    asChild
-                  >
-                    <a 
-                      href={cvUrl} 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Download className="mr-2 h-4 w-4" />
-                      Descargar CV
-                    </a>
-                  </Button>
-                </div>
+                {/* Overlay gradient desde abajo hacia arriba, muy suave y transparente */}
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
               </div>
 
               {/* Efectos de luz decorativos */}
