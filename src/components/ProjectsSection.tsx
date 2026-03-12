@@ -71,12 +71,12 @@ export function ProjectsSection() {
             </div>
 
             {/* Fila de Título: Port + folio */}
-            <div className="flex flex-col md:flex-row items-center md:items-end gap-2 md:gap-4 relative z-10">
-               <h2 className="text-6xl md:text-[10rem] font-bold text-transparent bg-clip-text bg-gradient-to-b from-blue-400 to-purple-600 tracking-tight leading-none drop-shadow-[0_0_20px_rgba(37,99,235,0.4)]">
+            <div className="flex flex-col md:flex-row items-center md:items-end gap-3 md:gap-4 relative z-10">
+               <h2 className="text-5xl md:text-[10rem] font-bold text-transparent bg-clip-text bg-gradient-to-b from-blue-400 to-purple-600 tracking-tight leading-none drop-shadow-[0_0_20px_rgba(37,99,235,0.4)]">
                  Port
                </h2>
-               <div className="relative inline-block border-[3px] md:border-[6px] border-cyan-400/80 rounded-[1.5rem] md:rounded-[2.5rem] bg-gradient-to-b from-blue-500/80 to-purple-800/80 px-4 py-1 md:px-8 md:py-2 md:mb-4 shadow-[0_0_40px_rgba(34,211,238,0.3)]">
-                 <h2 className="text-6xl md:text-[10rem] font-black text-white leading-none tracking-tighter">
+               <div className="relative inline-block border-[3px] md:border-[6px] border-cyan-400/80 rounded-[1.2rem] md:rounded-[2.5rem] bg-gradient-to-b from-blue-500/80 to-purple-800/80 px-4 py-1 md:px-8 md:py-2 md:mb-4 shadow-[0_0_40px_rgba(34,211,238,0.3)]">
+                 <h2 className="text-5xl md:text-[10rem] font-black text-white leading-none tracking-tighter">
                    folio
                  </h2>
                </div>
@@ -90,18 +90,18 @@ export function ProjectsSection() {
             </div>
 
             {/* Graphic Design con detalles de píxeles decorativos */}
-            <div className="mt-12 flex flex-col md:flex-row items-center gap-4 md:gap-6 w-full">
+            <div className="mt-8 md:mt-12 flex flex-col md:flex-row items-center gap-4 md:gap-6 w-full">
                <div className="hidden md:block flex-1 h-[2px] bg-gradient-to-r from-blue-500 via-white to-transparent opacity-40"></div>
-               <span className="text-xl md:text-3xl uppercase tracking-[0.3em] font-bold text-white whitespace-nowrap text-center">
+               <span className="text-lg md:text-3xl uppercase tracking-[0.3em] font-bold text-white whitespace-nowrap text-center">
                  Graphic <span className="text-blue-400">Design</span>
                </span>
                <div className="grid grid-cols-2 gap-1 opacity-60">
-                 <div className="w-2 h-2 md:w-3 md:h-3 bg-white"></div>
-                 <div className="w-2 h-2 md:w-3 md:h-3 bg-blue-500"></div>
-                 <div className="w-2 h-2 md:w-3 md:h-3 bg-blue-500"></div>
-                 <div className="w-2 h-2 md:w-3 md:h-3 bg-white"></div>
+                 <div className="w-1.5 h-1.5 md:w-3 md:h-3 bg-white"></div>
+                 <div className="w-1.5 h-1.5 md:w-3 md:h-3 bg-blue-500"></div>
+                 <div className="w-1.5 h-1.5 md:w-3 md:h-3 bg-blue-500"></div>
+                 <div className="w-1.5 h-1.5 md:w-3 md:h-3 bg-white"></div>
                </div>
-               <div className="md:hidden w-32 h-[1px] bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+               <div className="md:hidden w-24 h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
             </div>
           </div>
 

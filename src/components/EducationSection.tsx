@@ -37,14 +37,14 @@ export function EducationSection() {
     <section id="educacion" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 fade-in">
-          <div className="flex items-center justify-center mb-4">
-            <GraduationCap className="h-8 w-8 text-primary mr-3" />
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <GraduationCap className="h-8 w-8 text-purple-400" />
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
               Educación y Formación
             </h2>
           </div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Mi trayectoria académica y profesional que respalda mi experiencia en las diferentes areas.
+            Mi trayectoria académica y profesional que respalda mi experiencia en las diferentes áreas.
           </p>
         </div>
 
