@@ -47,50 +47,61 @@ export function ProjectsSection() {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 relative z-10 w-full flex flex-col items-center justify-center">
+        {/* Encabezado Estandarizado para Consistencia */}
+        <div className="w-full text-center mb-12 fade-in">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <Sparkles className="h-8 w-8 text-blue-400" />
+            <h2 className="text-4xl md:text-5xl font-bold text-white">
+              Mi Portafolio
+            </h2>
+          </div>
+        </div>
+
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
           
           {/* Layout Principal Central (Basado en imagen) */}
           <div className="relative flex flex-col items-center md:items-start gap-4">
             
             {/* Shapes decorativas flotantes */}
-            <div className="absolute -top-20 -left-10 md:-left-20 animate-float-y2k opacity-80">
-               <Sparkles className="w-12 h-12 text-blue-400 fill-blue-400/20" />
+            <div className="absolute -top-12 -left-4 md:-top-20 md:-left-20 animate-float-y2k opacity-80 z-0">
+               <Sparkles className="w-8 h-8 md:w-12 md:h-12 text-blue-400 fill-blue-400/20" />
             </div>
-            <div className="absolute top-0 -right-10 md:-right-20 animate-bounce opacity-80" style={{ animationDuration: '4s' }}>
-               <div className="w-8 h-8 rounded-full border-4 border-blue-400/40"></div>
+            <div className="absolute -top-10 right-0 md:top-0 md:-right-20 animate-bounce opacity-80 z-0" style={{ animationDuration: '4s' }}>
+               <div className="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 md:border-4 border-blue-400/40"></div>
             </div>
 
             {/* Fila de Título: Port + folio */}
-            <div className="flex flex-col md:flex-row items-center md:items-end gap-0 md:gap-4">
-               <h2 className="text-8xl md:text-[10rem] font-bold text-transparent bg-clip-text bg-gradient-to-b from-blue-400 to-purple-600 tracking-tight leading-none drop-shadow-[0_0_20px_rgba(37,99,235,0.4)]">
+            <div className="flex flex-col md:flex-row items-center md:items-end gap-2 md:gap-4 relative z-10">
+               <h2 className="text-6xl md:text-[10rem] font-bold text-transparent bg-clip-text bg-gradient-to-b from-blue-400 to-purple-600 tracking-tight leading-none drop-shadow-[0_0_20px_rgba(37,99,235,0.4)]">
                  Port
                </h2>
-               <div className="relative inline-block border-[6px] border-cyan-400/80 rounded-[2.5rem] bg-gradient-to-b from-blue-500/80 to-purple-800/80 px-8 py-2 md:mb-4 shadow-[0_0_40px_rgba(34,211,238,0.3)]">
-                 <h2 className="text-8xl md:text-[10rem] font-black text-white leading-none tracking-tighter">
+               <div className="relative inline-block border-[3px] md:border-[6px] border-cyan-400/80 rounded-[1.5rem] md:rounded-[2.5rem] bg-gradient-to-b from-blue-500/80 to-purple-800/80 px-4 py-1 md:px-8 md:py-2 md:mb-4 shadow-[0_0_40px_rgba(34,211,238,0.3)]">
+                 <h2 className="text-6xl md:text-[10rem] font-black text-white leading-none tracking-tighter">
                    folio
                  </h2>
                </div>
             </div>
 
             {/* Año en estilo Digital/Pixel */}
-            <div className="mt-2 pl-2">
-               <span className="text-5xl md:text-7xl font-mono font-black text-white/90 tracking-widest" style={{ letterSpacing: '0.2em' }}>
+            <div className="mt-4 md:mt-2 md:pl-2">
+               <span className="text-4xl md:text-7xl font-mono font-black text-white/90 tracking-widest" style={{ letterSpacing: '0.2em' }}>
                  2025
                </span>
             </div>
 
             {/* Graphic Design con detalles de píxeles decorativos */}
-            <div className="mt-12 flex items-center gap-6 w-full">
-               <div className="flex-1 h-[2px] bg-gradient-to-r from-blue-500 via-white to-transparent opacity-40"></div>
-               <span className="text-2xl md:text-3xl uppercase tracking-[0.3em] font-bold text-white whitespace-nowrap">
+            <div className="mt-12 flex flex-col md:flex-row items-center gap-4 md:gap-6 w-full">
+               <div className="hidden md:block flex-1 h-[2px] bg-gradient-to-r from-blue-500 via-white to-transparent opacity-40"></div>
+               <span className="text-xl md:text-3xl uppercase tracking-[0.3em] font-bold text-white whitespace-nowrap text-center">
                  Graphic <span className="text-blue-400">Design</span>
                </span>
                <div className="grid grid-cols-2 gap-1 opacity-60">
-                 <div className="w-3 h-3 bg-white"></div>
-                 <div className="w-3 h-3 bg-blue-500"></div>
-                 <div className="w-3 h-3 bg-blue-500"></div>
-                 <div className="w-3 h-3 bg-white"></div>
+                 <div className="w-2 h-2 md:w-3 md:h-3 bg-white"></div>
+                 <div className="w-2 h-2 md:w-3 md:h-3 bg-blue-500"></div>
+                 <div className="w-2 h-2 md:w-3 md:h-3 bg-blue-500"></div>
+                 <div className="w-2 h-2 md:w-3 md:h-3 bg-white"></div>
                </div>
+               <div className="md:hidden w-32 h-[1px] bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
             </div>
           </div>
 
@@ -109,6 +120,17 @@ export function ProjectsSection() {
               Ver portafolio
               <ArrowRight className="ml-3 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
+          </div>
+
+          {/* Scroll indicator */}
+          <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-40 animate-bounce hidden md:block">
+            <button
+              onClick={() => scrollToSection('proyectos')}
+              className="flex flex-col items-center gap-2 text-white/70 hover:text-white transition-colors"
+            >
+              <span className="text-xs uppercase tracking-widest font-bold">Explorar</span>
+              <ArrowDown className="h-6 w-6" />
+            </button>
           </div>
 
         </div>

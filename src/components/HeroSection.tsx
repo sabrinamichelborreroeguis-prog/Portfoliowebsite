@@ -56,7 +56,7 @@ export function HeroSection() {
                 <span className="text-sm text-muted-foreground">2025 | Diseño & Creatividad</span>
               </div>
 
-              <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight" style={{ fontStyle: 'italic', letterSpacing: '-0.02em' }}>
+              <h1 className="text-4xl md:text-7xl font-bold text-foreground leading-tight" style={{ fontStyle: 'italic', letterSpacing: '-0.02em' }}>
                 SABRINA
                 <br />
                 <span className="text-gradient-purple">
@@ -200,7 +200,7 @@ export function HeroSection() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-20 animate-bounce hidden md:block">
         <button
           onClick={() => scrollToSection('proyectos')}
           className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
