@@ -90,7 +90,7 @@ export function HeroSection() {
                 onClick={() => window.location.hash = 'portfolio'}
               >
                 <Play className="mr-2 h-5 w-5 fill-white" />
-                Ver Portfolio
+                Ver Portafolio
               </Button>
 
               <Button
@@ -209,6 +209,27 @@ export function HeroSection() {
           <ArrowDown className="h-5 w-5" />
         </button>
       </div>
+
+      {/* Banner caligráfico al final de la sección */}
+      <MovingBanner />
     </section>
+  );
+}
+
+function MovingBanner() {
+  return (
+    <div className="absolute bottom-0 w-full bg-purple-950/40 backdrop-blur-sm border-t border-purple-500/10 z-30 overflow-hidden h-12 flex items-center">
+      <div className="flex whitespace-nowrap animate-marquee">
+        {[...Array(6)].map((_, i) => (
+          <span
+            key={i}
+            className="text-white/90 select-none px-12 font-calligraphy italic tracking-wider"
+            style={{ fontSize: "1.5rem" }}
+          >
+            Sabrina Borrero Eguis – 2026
+          </span>
+        ))}
+      </div>
+    </div>
   );
 }

@@ -105,7 +105,7 @@ export function PortfolioPage() {
 
                 <div className="mb-12">
                     <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-                        Mi <span className="text-gradient-purple">Portfolio</span>
+                        Mi <span className="text-gradient-purple">Portafolio</span>
                     </h1>
                     <p className="text-lg text-muted-foreground max-w-2xl">
                         Explora de manera detallada mis trabajos agrupados por categorías, desde la dirección de arte hasta el modelado 3D y el diseño UI/UX.

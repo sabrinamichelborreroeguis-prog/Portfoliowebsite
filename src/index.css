@@ -529,6 +529,10 @@
 }
 
 @layer utilities {
+  .font-calligraphy {
+    font-family: var(--font-calligraphy), cursive;
+  }
+
   .\@container\/card-header {
     container: card-header / inline-size;
   }

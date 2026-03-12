@@ -32,8 +32,9 @@ export function ContactSection() {
 *Mensaje:*
 ${formData.message}`;
 
-    // Abrir WhatsApp
-    window.open('https://wa.link/e53d2b', '_blank');
+    // Abrir WhatsApp con el mensaje
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    window.open(`https://wa.me/573502393590?text=${encodedMessage}`, '_blank');
 
     // Opcional: Limpiar el formulario después de enviar
     setFormData({
@@ -75,7 +76,7 @@ ${formData.message}`;
     <section id="contacto" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Contáctame
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

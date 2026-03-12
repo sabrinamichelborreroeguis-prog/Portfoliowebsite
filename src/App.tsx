@@ -69,22 +69,6 @@ export default function App() {
         </main>
         <Footer />
       </div>
-
-      {/* Moving Banner */}
-      <div className="fixed bottom-0 w-full bg-purple-950/80 backdrop-blur-md border-t border-purple-500/20 z-50 overflow-hidden h-10 flex items-center">
-        <div className="flex whitespace-nowrap animate-marquee">
-          {/* Duplicate text to create an infinite loop effect. Using 4 elements here to ensure it covers screens. */}
-          {[...Array(4)].map((_, i) => (
-            <span
-              key={i}
-              className="text-white/80 select-none px-8 font-serif"
-              style={{ fontFamily: "'Great Vibes', cursive", fontSize: "1.3rem" }}
-            >
-              Sabrina Borrero Eguis – 2026
-            </span>
-          ))}
-        </div>
-      </div>
     </div>
   );
 }
