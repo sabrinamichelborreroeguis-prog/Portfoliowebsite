@@ -2,7 +2,6 @@ import { ArrowRight, Play } from 'lucide-react';
 import { Button } from './ui/button';
 import { useEffect, useState } from 'react';
 import { Badge } from './ui/badge';
-import portfolioBg from "../assets/32204cad6ec5f429b07bf17aaf39dcd3639d7cf7.png"; // Usando la misma imagen para mantener consistencia o podrías pedir otra
 
 export function ProjectsSection() {
   const [isVisible, setIsVisible] = useState(false);
