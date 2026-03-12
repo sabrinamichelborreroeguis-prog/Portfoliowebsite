@@ -122,17 +122,6 @@ export function ProjectsSection() {
             </Button>
           </div>
 
-          {/* Scroll indicator */}
-          <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-40 animate-bounce hidden md:block">
-            <button
-              onClick={() => scrollToSection('proyectos')}
-              className="flex flex-col items-center gap-2 text-white/70 hover:text-white transition-colors"
-            >
-              <span className="text-xs uppercase tracking-widest font-bold">Explorar</span>
-              <ArrowDown className="h-6 w-6" />
-            </button>
-          </div>
-
         </div>
       </div>
     </section>
