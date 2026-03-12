@@ -1,7 +1,6 @@
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight, Play, Sparkles } from 'lucide-react';
 import { Button } from './ui/button';
 import { useEffect, useState } from 'react';
-import { Badge } from './ui/badge';
 
 export function ProjectsSection() {
   const [isVisible, setIsVisible] = useState(false);
