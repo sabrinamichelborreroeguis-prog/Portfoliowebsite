@@ -46,9 +46,9 @@ export function ServicesSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20 md:mb-32 fade-in mt-12 md:mt-20">
           <div className="flex flex-col items-center justify-center gap-8 md:gap-10 mb-10 md:mb-14">
-            <GraduationCap className="h-8 w-8 md:h-12 md:w-12 text-purple-400 mb-4 md:mb-6" />
+            <Sparkles className="h-8 w-8 md:h-12 md:w-12 text-purple-400 mb-4 md:mb-6" />
             <h2 className="text-2xl md:text-5xl font-bold text-foreground tracking-tight md:uppercase">
-              Educación y Formación
+              Mis Servicios
             </h2>
           </div>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">

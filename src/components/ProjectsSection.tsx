@@ -26,7 +26,7 @@ export function ProjectsSection() {
   return (
     <section 
       id="proyectos" 
-      className="relative h-[70vh] flex items-center justify-center overflow-hidden bg-black font-mono"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black font-mono py-20"
     >
       {/* Fondo de Estrellas Parpadeantes */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -46,42 +46,42 @@ export function ProjectsSection() {
         ))}
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 relative z-10 w-full flex flex-col items-center justify-center py-24 md:py-32">
-        <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+      <div className="max-w-7xl mx-auto px-4 relative z-10 w-full flex flex-col items-center justify-center py-20 md:py-32">
+        <div className={`w-full transition-all duration-1000 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
           
-          {/* Aesthetic Glass Box Container for Title */}
-          <div className="relative group p-8 md:p-16 rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl flex flex-col items-center">
+          {/* Large, Full-screen Aesthetic Glass Box */}
+          <div className="relative group w-full p-12 md:p-24 rounded-[3rem] md:rounded-[4rem] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-2xl shadow-2xl flex flex-col items-center min-h-[60vh] justify-center">
             {/* Animated Glow behind the box */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 via-transparent to-purple-500/10 opacity-50"></div>
+            <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 via-transparent to-purple-500/10 opacity-60"></div>
             
             {/* Shapes decorativas flotantes sutiles */}
-            <div className="absolute -top-6 -left-6 md:-top-10 md:-left-10 animate-float-y2k opacity-60 pointer-events-none">
-               <Sparkles className="w-8 h-8 md:w-12 md:h-12 text-blue-400/50" />
+            <div className="absolute top-12 left-12 md:top-20 md:left-20 animate-float-y2k opacity-60 pointer-events-none">
+               <Sparkles className="w-10 h-10 md:w-16 md:h-16 text-blue-400/50" />
             </div>
-            <div className="absolute -bottom-6 -right-6 md:-bottom-10 md:-right-10 animate-pulse opacity-40 pointer-events-none">
-               <div className="w-10 h-10 md:w-16 md:h-16 rounded-full border-2 border-purple-400/30"></div>
+            <div className="absolute bottom-12 right-12 md:bottom-20 md:right-20 animate-pulse opacity-40 pointer-events-none">
+               <div className="w-16 h-16 md:w-24 md:h-24 rounded-full border-2 border-purple-400/30"></div>
             </div>
 
             {/* Título Principal: PORTAFOLIO (Unificado y Estético) */}
-            <div className="relative z-10 flex flex-col items-center text-center">
-               <h2 className="text-5xl md:text-8xl font-black tracking-[0.2em] text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] select-none uppercase">
+            <div className="relative z-10 flex flex-col items-center text-center w-full">
+               <h2 className="text-6xl md:text-[10rem] font-black tracking-[0.2em] text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.4)] select-none uppercase leading-none">
                  Portafolio
                </h2>
                
                {/* Año en estilo Moderno / Digital */}
-               <div className="mt-4 md:mt-6 bg-white/10 px-4 py-1 rounded-full border border-white/20">
-                  <span className="text-2xl md:text-4xl font-mono font-bold text-blue-400 tracking-[0.3em]">
+               <div className="mt-8 md:mt-12 bg-white/10 px-8 py-2 md:px-12 md:py-4 rounded-full border border-white/20 hover:bg-white/20 transition-colors duration-500">
+                  <span className="text-3xl md:text-6xl font-mono font-bold text-blue-400 tracking-[0.4em]">
                     2025
                   </span>
                </div>
 
                {/* Subtítulo: Graphic Design */}
-               <div className="mt-8 flex items-center gap-6">
-                 <div className="w-12 md:w-20 h-[1px] bg-gradient-to-r from-transparent to-white/40"></div>
-                 <span className="text-sm md:text-xl uppercase tracking-[0.5em] font-medium text-white/80">
-                   Graphic <span className="text-purple-400">Design</span>
+               <div className="mt-12 md:mt-20 flex items-center gap-10 md:gap-16 w-full max-w-4xl">
+                 <div className="flex-1 h-[2px] bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+                 <span className="text-lg md:text-3xl uppercase tracking-[0.6em] font-medium text-white/90 whitespace-nowrap">
+                   Graphic <span className="text-purple-400 font-bold">Design</span>
                  </span>
-                 <div className="w-12 md:w-20 h-[1px] bg-gradient-to-l from-transparent to-white/40"></div>
+                 <div className="flex-1 h-[2px] bg-gradient-to-l from-transparent via-white/40 to-transparent"></div>
                </div>
             </div>
           </div>
