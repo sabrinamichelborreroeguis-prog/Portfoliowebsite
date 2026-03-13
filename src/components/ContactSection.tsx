@@ -1,5 +1,5 @@
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { Card, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
@@ -143,7 +143,7 @@ ${formData.message}`;
               <CardHeader>
                 <CardTitle className="text-lg">Disponibilidad</CardTitle>
               </CardHeader>
-              <CardContent>
+              <div className="px-6 pb-6">
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-muted-foreground">Estado actual:</span>
@@ -160,7 +160,7 @@ ${formData.message}`;
                     <span className="text-sm">Remoto/Híbrido</span>
                   </div>
                 </div>
-              </CardContent>
+              </div>
             </Card>
           </div>
 
@@ -169,7 +169,7 @@ ${formData.message}`;
             <CardHeader>
               <CardTitle className="text-2xl">Envíame un mensaje</CardTitle>
             </CardHeader>
-            <CardContent className="pb-0">
+            <div className="px-6 pb-6">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div className="space-y-2">
@@ -227,7 +227,7 @@ ${formData.message}`;
                   <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </form>
-            </CardContent>
+            </div>
           </Card>
         </div>
       </div>
