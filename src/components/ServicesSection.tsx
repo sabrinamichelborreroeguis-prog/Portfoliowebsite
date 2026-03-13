@@ -1,4 +1,4 @@
-import { Code, Smartphone, Palette, Globe, Database, Zap, Sparkles } from 'lucide-react';
+import { Code, Smartphone, Palette, Globe, Database, Zap } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 
 export function ServicesSection() {
@@ -23,45 +23,42 @@ export function ServicesSection() {
     },
     {
       icon: Globe,
-      title: "Diseño de Identidad de Marca",
-      description: "Desarrollo de identidad de marca visuales e impresas, para el mejoramiento de la empresa o emprendimiento.",
-      features: ["Marca", "Branding", "Litografía", "Imprenta"]
+      title: "Diseño de Idetidad de Marca",
+      description: "Desarrollo de identidad de marca visuales e impresas, para el mejoramiento de la empresa o emprendimiento,",
+      features: ["Marca", "Branding", "Litografia", "Imprenta"]
     },
     {
       icon: Database,
       title: "Campañas Publicitarias",
-      description: "Diseño e implementación de campañas publicitarias a la necesidad o búsqueda del cliente.",
-      features: ["Branding", "Redes Sociales", "Edición de Video"]
+      description: "Diseño e implementación de campañas publicitarias a la necesidad o busqueda del cliente.",
+      features: ["Branding", "Redes Sociales", "Edicion de Video"]
     },
     {
       icon: Zap,
       title: "Auditora Interna en el Sistema de Gestión de Calidad",
-      description: "Auditora Enfocada a la Mejora del Desempeño de la Organización, con Fundamento en la ISO 9001:2015.",
+      description: "Auditora Enfocada a la Mejora del Desempeño de la Organizacón, con Fundamento en la ISO 9001:2015.",
       features: ["Auditoría de Calidad", "Estratega", "Direccionamiento"]
     }
   ];
 
   return (
-    <section id="servicios" className="py-16 md:py-32 px-4 sm:px-6 lg:px-8">
+    <section id="servicios" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20 md:mb-32 fade-in mt-12 md:mt-20">
-          <div className="flex flex-col items-center justify-center gap-4 md:gap-6 mb-8 md:mb-10">
-            <Sparkles className="h-8 w-8 md:h-12 md:w-12 text-purple-400 mb-1 md:mb-2" />
-            <h2 className="text-2xl md:text-5xl font-bold text-foreground tracking-tight md:uppercase">
-              Mis Servicios
-            </h2>
-          </div>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-4">
+        <div className="text-center mb-16 fade-in">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Mis Servicios
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Ofrezco soluciones tecnológicas completas, desde el diseño hasta la implementación,
             adaptadas a las necesidades específicas de cada proyecto
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-4">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <Card key={index} className="group glass-card-hover border-border bg-card slide-up p-2 md:p-4" style={{ animationDelay: `${index * 0.1}s` }}>
+              <Card key={index} className="group glass-card-hover border-border bg-card slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardHeader className="pb-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                     <IconComponent className="h-6 w-6 text-primary" />
@@ -88,13 +85,11 @@ export function ServicesSection() {
           })}
         </div>
 
-        <div className="mt-32 md:mt-56">
-          <div className="flex flex-col items-center justify-center gap-4 md:gap-6 mb-8 md:mb-10 fade-in delay-300">
-            <Zap className="h-8 w-8 md:h-12 md:w-12 text-purple-400 mb-1 md:mb-2" />
-            <h2 className="text-2xl md:text-5xl font-bold text-foreground tracking-tight md:uppercase">
-              Mi Proceso de Trabajo
-            </h2>
-          </div>
+        {/* Proceso de trabajo */}
+        <div className="mt-20">
+          <h3 className="text-2xl font-bold text-foreground text-center mb-12 fade-in delay-300">
+            Mi Proceso de Trabajo
+          </h3>
           <div className="grid gap-8 md:grid-cols-4">
             {[
               { step: "01", title: "Análisis", description: "Entendimiento profundo de tus necesidades y objetivos" },

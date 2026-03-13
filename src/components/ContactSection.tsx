@@ -1,5 +1,5 @@
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import { Card, CardHeader, CardTitle } from './ui/card';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
@@ -7,6 +7,9 @@ import { Label } from './ui/label';
 import { useState } from 'react';
 
 export function ContactSection() {
+  // Tu número de WhatsApp (formato internacional sin + ni espacios)
+  const whatsappNumber = 'https://wa.link/e53d2b';
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,7 +24,7 @@ export function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
+    
     // Construir el mensaje de WhatsApp con todos los datos del formulario
     const whatsappMessage = `Hola! Me contacto desde tu portafolio.
 
@@ -32,10 +35,13 @@ export function ContactSection() {
 *Mensaje:*
 ${formData.message}`;
 
-    // Abrir WhatsApp con el mensaje
+    // Codificar el mensaje para URL
     const encodedMessage = encodeURIComponent(whatsappMessage);
-    window.open(`https://wa.me/573502393590?text=${encodedMessage}`, '_blank');
-
+    
+    // Abrir WhatsApp con el mensaje prellenado
+    const whatsappUrl = `https://wa.link/e53d2b`;
+    window.open(whatsappUrl, '_blank');
+    
     // Opcional: Limpiar el formulario después de enviar
     setFormData({
       name: '',
@@ -66,23 +72,26 @@ ${formData.message}`;
     }
   ];
 
+  const socialLinks = [
+    { icon: Github, href: "#", label: "GitHub" },
+    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Twitter, href: "#", label: "Twitter" }
+  ];
+
   return (
-    <section id="contacto" className="py-16 md:py-32 px-4 sm:px-6 lg:px-8">
+    <section id="contacto" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 md:mb-24 fade-in mt-8 md:mt-12">
-          <div className="flex flex-col items-center justify-center gap-4 md:gap-6 mb-8 md:mb-10">
-            <Mail className="h-8 w-8 md:h-12 md:w-12 text-purple-400 mb-1 md:mb-2" />
-            <h2 className="text-2xl md:text-5xl font-bold text-foreground tracking-tight md:uppercase">
-              Contáctame
-            </h2>
-          </div>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-4">
+        <div className="text-center mb-16 fade-in">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Contáctame
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             ¿Tienes una idea o proyecto en mente? Me encantaría escuchar sobre ello.
             Conversemos sobre cómo puedo ayudarte a hacerlo realidad.
           </p>
         </div>
 
-        <div className="grid gap-12 lg:grid-cols-2 mt-4">
+        <div className="grid gap-12 lg:grid-cols-2">
           {/* Información de contacto */}
           <div className="space-y-8 slide-in-left">
             <div>
@@ -108,17 +117,41 @@ ${formData.message}`;
               </div>
             </div>
 
+            {/* Redes sociales */}
+            <div>
+              <h4 className="font-semibold text-foreground mb-4">Sígueme en</h4>
+              <div className="flex space-x-4">
+                {socialLinks.map((social, index) => {
+                  const IconComponent = social.icon;
+                  return (
+                    <Button
+                      key={index}
+                      variant="outline"
+                      size="sm"
+                      className="p-3"
+                      asChild
+                    >
+                      <a href={social.href} target="_blank" rel="noopener noreferrer">
+                        <IconComponent className="h-5 w-5" />
+                        <span className="sr-only">{social.label}</span>
+                      </a>
+                    </Button>
+                  );
+                })}
+              </div>
+            </div>
+
             {/* Disponibilidad */}
             <Card className="border-border glass-card">
               <CardHeader>
                 <CardTitle className="text-lg">Disponibilidad</CardTitle>
               </CardHeader>
-              <div className="px-6 pb-6">
+              <CardContent>
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-muted-foreground">Estado actual:</span>
-                    <span className="text-sm font-medium text-green-100 bg-green-600/30 border border-green-500/50 px-3 py-1 rounded-full flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>Disponible
+                    <span className="text-sm font-medium text-green-600 bg-green-50 px-2 py-1 rounded-full">
+                      Disponible
                     </span>
                   </div>
                   <div className="flex items-center justify-between">
@@ -130,7 +163,7 @@ ${formData.message}`;
                     <span className="text-sm">Remoto/Híbrido</span>
                   </div>
                 </div>
-              </div>
+              </CardContent>
             </Card>
           </div>
 
@@ -139,11 +172,11 @@ ${formData.message}`;
             <CardHeader>
               <CardTitle className="text-2xl">Envíame un mensaje</CardTitle>
             </CardHeader>
-            <div className="px-6 pb-6">
+            <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Nombre</Label>
+                    <Label htmlFor="name">Nombre *</Label>
                     <Input
                       id="name"
                       placeholder="Tu nombre completo"
@@ -154,7 +187,7 @@ ${formData.message}`;
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
+                    <Label htmlFor="email">Email *</Label>
                     <Input
                       id="email"
                       type="email"
@@ -166,9 +199,9 @@ ${formData.message}`;
                     />
                   </div>
                 </div>
-
+                
                 <div className="space-y-2">
-                  <Label htmlFor="subject">Asunto</Label>
+                  <Label htmlFor="subject">Asunto *</Label>
                   <Input
                     id="subject"
                     placeholder="¿En qué puedo ayudarte?"
@@ -178,26 +211,26 @@ ${formData.message}`;
                     className="glass-input"
                   />
                 </div>
-
+                
                 <div className="space-y-2">
-                  <Label htmlFor="message">Mensaje</Label>
+                  <Label htmlFor="message">Mensaje *</Label>
                   <Textarea
                     id="message"
                     placeholder="Cuéntame más sobre tu proyecto o idea..."
-                    rows={8}
+                    rows={6}
                     required
                     value={formData.message}
                     onChange={handleInputChange}
                     className="glass-input"
                   />
                 </div>
-
+                
                 <Button type="submit" className="w-full group bg-primary hover:bg-primary/90 text-primary-foreground">
                   Enviar mensaje
                   <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </form>
-            </div>
+            </CardContent>
           </Card>
         </div>
       </div>

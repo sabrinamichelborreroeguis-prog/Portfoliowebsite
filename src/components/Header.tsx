@@ -2,70 +2,51 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
 
-interface HeaderProps {
-  currentPage?: string;
-}
-
-export function Header({ currentPage = 'home' }: HeaderProps) {
+export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navigateToSection = (sectionId: string) => {
-    if (sectionId === 'portfolio') {
-      window.location.hash = 'portfolio';
-    } else {
-      if (currentPage !== 'home') {
-        window.location.hash = 'home';
-        // Give time for layout to render before scrolling
-        setTimeout(() => {
-          const element = document.getElementById(sectionId);
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-          }
-        }, 100);
-      } else {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
     }
-    setIsMenuOpen(false);
   };
 
   return (
     <header className="fixed top-0 w-full bg-background/80 border-b border-primary/20 z-50 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <h1 className="text-2xl font-bold text-gradient-purple cursor-pointer" onClick={() => navigateToSection('inicio')}>Sabrina</h1>
-
+          <h1 className="text-2xl font-bold text-gradient-purple">Mi Portafolio</h1>
+          
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8 items-center">
+          <nav className="hidden md:flex space-x-8">
             <button
-              onClick={() => navigateToSection('inicio')}
-              className={`transition-colors ${currentPage === 'home' ? 'text-primary font-medium' : 'text-muted-foreground hover:text-primary'}`}
+              onClick={() => scrollToSection('inicio')}
+              className="text-muted-foreground hover:text-primary transition-colors"
             >
               Inicio
             </button>
             <button
-              onClick={() => navigateToSection('educacion')}
+              onClick={() => scrollToSection('educacion')}
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               Educación
             </button>
             <button
-              onClick={() => navigateToSection('servicios')}
+              onClick={() => scrollToSection('servicios')}
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               Servicios
             </button>
             <button
-              onClick={() => navigateToSection('portfolio')}
-              className={`transition-colors ${currentPage === 'portfolio' ? 'text-primary font-medium' : 'text-muted-foreground hover:text-primary'}`}
+              onClick={() => scrollToSection('proyectos')}
+              className="text-muted-foreground hover:text-primary transition-colors"
             >
-              Portafolio
+              Proyectos
             </button>
             <button
-              onClick={() => navigateToSection('contacto')}
+              onClick={() => scrollToSection('contacto')}
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               Contacto
@@ -88,31 +69,31 @@ export function Header({ currentPage = 'home' }: HeaderProps) {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 glass-card rounded-lg mt-2">
               <button
-                onClick={() => navigateToSection('inicio')}
+                onClick={() => scrollToSection('inicio')}
                 className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors w-full text-left"
               >
                 Inicio
               </button>
               <button
-                onClick={() => navigateToSection('educacion')}
+                onClick={() => scrollToSection('educacion')}
                 className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors w-full text-left"
               >
                 Educación
               </button>
               <button
-                onClick={() => navigateToSection('servicios')}
+                onClick={() => scrollToSection('servicios')}
                 className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors w-full text-left"
               >
                 Servicios
               </button>
               <button
-                onClick={() => navigateToSection('portfolio')}
+                onClick={() => scrollToSection('proyectos')}
                 className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors w-full text-left"
               >
-                Portafolio
+                Proyectos
               </button>
               <button
-                onClick={() => navigateToSection('contacto')}
+                onClick={() => scrollToSection('contacto')}
                 className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors w-full text-left"
               >
                 Contacto
