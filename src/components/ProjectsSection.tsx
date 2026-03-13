@@ -46,62 +46,43 @@ export function ProjectsSection() {
         ))}
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 relative z-10 w-full flex flex-col items-center justify-center py-24 md:py-40">
-        {/* Encabezado Estandarizado para Consistencia */}
-        <div className="w-full text-center mb-16 md:mb-28 fade-in">
-          <div className="flex flex-col items-center justify-center gap-4 md:gap-6 mb-8 md:mb-10">
-            <Sparkles className="h-10 w-10 md:h-14 md:w-14 text-blue-400 mb-1 md:mb-2" />
-            <h2 className="text-3xl md:text-7xl font-bold text-white tracking-tight md:uppercase">
-              Mi Portafolio
-            </h2>
-          </div>
-        </div>
-
-        <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
+      <div className="max-w-6xl mx-auto px-4 relative z-10 w-full flex flex-col items-center justify-center py-24 md:py-32">
+        <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
           
-          {/* Layout Principal Central (Basado en imagen) */}
-          <div className="relative flex flex-col items-center md:items-start gap-4">
+          {/* Aesthetic Glass Box Container for Title */}
+          <div className="relative group p-8 md:p-16 rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl flex flex-col items-center">
+            {/* Animated Glow behind the box */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 via-transparent to-purple-500/10 opacity-50"></div>
             
-            {/* Shapes decorativas flotantes */}
-            <div className="absolute -top-12 -left-4 md:-top-20 md:-left-20 animate-float-y2k opacity-80 z-0">
-               <Sparkles className="w-8 h-8 md:w-12 md:h-12 text-blue-400 fill-blue-400/20" />
+            {/* Shapes decorativas flotantes sutiles */}
+            <div className="absolute -top-6 -left-6 md:-top-10 md:-left-10 animate-float-y2k opacity-60 pointer-events-none">
+               <Sparkles className="w-8 h-8 md:w-12 md:h-12 text-blue-400/50" />
             </div>
-            <div className="absolute -top-10 right-0 md:top-0 md:-right-20 animate-bounce opacity-80 z-0" style={{ animationDuration: '4s' }}>
-               <div className="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 md:border-4 border-blue-400/40"></div>
+            <div className="absolute -bottom-6 -right-6 md:-bottom-10 md:-right-10 animate-pulse opacity-40 pointer-events-none">
+               <div className="w-10 h-10 md:w-16 md:h-16 rounded-full border-2 border-purple-400/30"></div>
             </div>
 
-            {/* Fila de Título: Port + folio */}
-            <div className="flex flex-col md:flex-row items-center md:items-end gap-3 md:gap-4 relative z-10">
-               <h2 className="text-5xl md:text-[10rem] font-bold text-transparent bg-clip-text bg-gradient-to-b from-blue-400 to-purple-600 tracking-tight leading-none drop-shadow-[0_0_20px_rgba(37,99,235,0.4)]">
-                 Port
+            {/* Título Principal: PORTAFOLIO (Unificado y Estético) */}
+            <div className="relative z-10 flex flex-col items-center text-center">
+               <h2 className="text-5xl md:text-8xl font-black tracking-[0.2em] text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] select-none uppercase">
+                 Portafolio
                </h2>
-               <div className="relative inline-block border-[3px] md:border-[6px] border-cyan-400/80 rounded-[1.2rem] md:rounded-[2.5rem] bg-gradient-to-b from-blue-500/80 to-purple-800/80 px-4 py-1 md:px-8 md:py-2 md:mb-4 shadow-[0_0_40px_rgba(34,211,238,0.3)]">
-                 <h2 className="text-5xl md:text-[10rem] font-black text-white leading-none tracking-tighter">
-                   folio
-                 </h2>
+               
+               {/* Año en estilo Moderno / Digital */}
+               <div className="mt-4 md:mt-6 bg-white/10 px-4 py-1 rounded-full border border-white/20">
+                  <span className="text-2xl md:text-4xl font-mono font-bold text-blue-400 tracking-[0.3em]">
+                    2025
+                  </span>
                </div>
-            </div>
 
-            {/* Año en estilo Digital/Pixel */}
-            <div className="mt-4 md:mt-2 md:pl-2">
-               <span className="text-4xl md:text-7xl font-mono font-black text-white/90 tracking-widest" style={{ letterSpacing: '0.2em' }}>
-                 2025
-               </span>
-            </div>
-
-            {/* Graphic Design con detalles de píxeles decorativos */}
-            <div className="mt-8 md:mt-12 flex flex-col md:flex-row items-center gap-4 md:gap-6 w-full">
-               <div className="hidden md:block flex-1 h-[2px] bg-gradient-to-r from-blue-500 via-white to-transparent opacity-40"></div>
-               <span className="text-lg md:text-3xl uppercase tracking-[0.3em] font-bold text-white whitespace-nowrap text-center">
-                 Graphic <span className="text-blue-400">Design</span>
-               </span>
-               <div className="grid grid-cols-2 gap-1 opacity-60">
-                 <div className="w-1.5 h-1.5 md:w-3 md:h-3 bg-white"></div>
-                 <div className="w-1.5 h-1.5 md:w-3 md:h-3 bg-blue-500"></div>
-                 <div className="w-1.5 h-1.5 md:w-3 md:h-3 bg-blue-500"></div>
-                 <div className="w-1.5 h-1.5 md:w-3 md:h-3 bg-white"></div>
+               {/* Subtítulo: Graphic Design */}
+               <div className="mt-8 flex items-center gap-6">
+                 <div className="w-12 md:w-20 h-[1px] bg-gradient-to-r from-transparent to-white/40"></div>
+                 <span className="text-sm md:text-xl uppercase tracking-[0.5em] font-medium text-white/80">
+                   Graphic <span className="text-purple-400">Design</span>
+                 </span>
+                 <div className="w-12 md:w-20 h-[1px] bg-gradient-to-l from-transparent to-white/40"></div>
                </div>
-               <div className="md:hidden w-24 h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
             </div>
           </div>
 
