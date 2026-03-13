@@ -22,7 +22,7 @@ const portfolioProjects: ProjectData[] = [
         year: "2024",
         category: "Branding",
         description: "Desarrollo completo de identidad de marca para clínica odontológica en Barranquilla. Creación de branding desde cero, manual de marca, diseño de elementos visuales.",
-        technologies: ["Identidad de marca", "Branding", "Fotografia", "Diseño"],
+        technologies: ["Identidad de marca", "Branding", "Fotografía", "Diseño"],
         imageUrl: "https://smilingclinicadental.com/wp-content/uploads/2024/05/Diseno-sin-titulo-8.png",
         projectUrl: "https://www.behance.net/gallery/236794675/manual-de-narca-smilig"
     },
@@ -32,7 +32,7 @@ const portfolioProjects: ProjectData[] = [
         year: "2025",
         category: "Advertising",
         description: "Campaña publicitaria integral para el lanzamiento como Reina de Malambo 2025. Conceptualización creativa, sesiones fotográficas, edición y gestión estratégica.",
-        technologies: ["Campañas", "Redes sociales", "Fotografia", "Edicion"],
+        technologies: ["Campañas", "Redes sociales", "Fotografía", "Edición"],
         imageUrl: "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/56a7ac236795051.68f2f4aebb246.jpg",
         projectUrl: "https://www.behance.net/gallery/236795051/Zarache"
     },
@@ -52,7 +52,7 @@ const portfolioProjects: ProjectData[] = [
         year: "2025",
         category: "Photography",
         description: "Campaña fotográfica completa para el lanzamiento del nuevo producto de Loto del Sur, inspirado en la icónica batalla de flores de Medellín.",
-        technologies: ["Fotografia", "Edicion", "Producto", "Redes Sociales"],
+        technologies: ["Fotografía", "Edición", "Producto", "Redes Sociales"],
         imageUrl: "https://historiasdelsur.com/wp-content/uploads/2016/03/cropped-1523284_1452033528343739_127387866_o.jpg",
         projectUrl: "https://www.behance.net/gallery/236510327/Loto-del-Sur?share=1"
     },

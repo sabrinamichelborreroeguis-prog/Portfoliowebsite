@@ -67,7 +67,7 @@ export function HeroSection() {
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <span className="flex items-center gap-1">
                   <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                  Automatizadors
+                  Automatizadora
                 </span>
                 <span>|</span>
                 <span>Diseñadora Gráfica</span>
@@ -79,7 +79,7 @@ export function HeroSection() {
             <p className="text-base text-muted-foreground max-w-lg leading-relaxed">
               Creo soluciones digitales funcionales y estéticas, combinando pensamiento estratégico,
               experiencia de usuario y tecnología para optimizar procesos, fortalecer marcas y construir
-              productos eficientes, intuitivos y escalables..
+              productos eficientes, intuitivos y escalables.
             </p>
 
             {/* Botones de acción principales */}

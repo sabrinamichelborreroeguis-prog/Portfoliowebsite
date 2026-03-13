@@ -23,20 +23,20 @@ export function ServicesSection() {
     },
     {
       icon: Globe,
-      title: "Diseño de Idetidad de Marca",
-      description: "Desarrollo de identidad de marca visuales e impresas, para el mejoramiento de la empresa o emprendimiento,",
-      features: ["Marca", "Branding", "Litografia", "Imprenta"]
+      title: "Diseño de Identidad de Marca",
+      description: "Desarrollo de identidad de marca visuales e impresas, para el mejoramiento de la empresa o emprendimiento.",
+      features: ["Marca", "Branding", "Litografía", "Imprenta"]
     },
     {
       icon: Database,
       title: "Campañas Publicitarias",
-      description: "Diseño e implementación de campañas publicitarias a la necesidad o busqueda del cliente.",
-      features: ["Branding", "Redes Sociales", "Edicion de Video"]
+      description: "Diseño e implementación de campañas publicitarias a la necesidad o búsqueda del cliente.",
+      features: ["Branding", "Redes Sociales", "Edición de Video"]
     },
     {
       icon: Zap,
       title: "Auditora Interna en el Sistema de Gestión de Calidad",
-      description: "Auditora Enfocada a la Mejora del Desempeño de la Organizacón, con Fundamento en la ISO 9001:2015.",
+      description: "Auditora Enfocada a la Mejora del Desempeño de la Organización, con Fundamento en la ISO 9001:2015.",
       features: ["Auditoría de Calidad", "Estratega", "Direccionamiento"]
     }
   ];
