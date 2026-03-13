@@ -1,11 +1,9 @@
 import { ArrowRight, FolderOpen } from 'lucide-react';
 import { Button } from './ui/button';
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 export function ProjectsSection() {
   const [isVisible, setIsVisible] = useState(false);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -52,7 +50,7 @@ export function ProjectsSection() {
         {/* CTA Button - centered on the full width */}
         <div className="w-full flex justify-center">
           <Button
-            onClick={() => navigate('/portfolio')}
+            onClick={() => window.location.hash = 'portfolio'}
             className="px-10 py-5 md:px-14 md:py-6 rounded-full text-base md:text-lg font-bold tracking-wide transition-all duration-300 hover:scale-105"
             style={{
               background: 'linear-gradient(135deg, #7c3aed, #a855f7)',
