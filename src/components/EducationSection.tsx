@@ -51,10 +51,8 @@ export function EducationSection() {
 
         <div className="grid gap-6 md:grid-cols-2">
           {educationData.map((item, index) => (
-            <Card key={index} className="group glass-card-hover border-border bg-card slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
-              <CardContent className="p-6">
             <Card key={index} className="group glass-card border-border bg-card slide-up p-4 md:p-6" style={{ animationDelay: `${index * 0.1}s` }}>
-              <CardContent>
+              <CardContent className="p-0">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
