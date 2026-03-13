@@ -48,10 +48,10 @@ export function ProjectsSection() {
 
       <div className="max-w-6xl mx-auto px-4 relative z-10 w-full flex flex-col items-center justify-center">
         {/* Encabezado Estandarizado para Consistencia */}
-        <div className="w-full text-center mb-12 fade-in">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Sparkles className="h-8 w-8 text-blue-400" />
-            <h2 className="text-4xl md:text-5xl font-bold text-white">
+        <div className="w-full text-center mb-16 fade-in">
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <Sparkles className="h-10 w-10 text-blue-400" />
+            <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tight">
               Mi Portafolio
             </h2>
           </div>

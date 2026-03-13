@@ -44,10 +44,10 @@ export function ServicesSection() {
   return (
     <section id="servicios" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 fade-in">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Sparkles className="h-8 w-8 text-purple-400" />
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+        <div className="text-center mb-20 fade-in">
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <Sparkles className="h-10 w-10 text-purple-400" />
+            <h2 className="text-4xl md:text-6xl font-bold text-foreground tracking-tight">
               Mis Servicios
             </h2>
           </div>
@@ -88,11 +88,13 @@ export function ServicesSection() {
           })}
         </div>
 
-        {/* Proceso de trabajo */}
-        <div className="mt-20">
-          <h3 className="text-2xl font-bold text-foreground text-center mb-12 fade-in delay-300">
-            Mi Proceso de Trabajo
-          </h3>
+        <div className="mt-24">
+          <div className="flex items-center justify-center gap-4 mb-12 fade-in delay-300">
+            <Zap className="h-10 w-10 text-purple-400" />
+            <h3 className="text-4xl md:text-6xl font-bold text-foreground tracking-tight">
+              Mi Proceso de Trabajo
+            </h3>
+          </div>
           <div className="grid gap-8 md:grid-cols-4">
             {[
               { step: "01", title: "Análisis", description: "Entendimiento profundo de tus necesidades y objetivos" },

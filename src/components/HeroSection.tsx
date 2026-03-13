@@ -29,7 +29,7 @@ export function HeroSection() {
   return (
     <section
       id="inicio"
-      className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 relative overflow-hidden pb-32"
     >
       {/* Imagen de fondo con overlay */}
       <div className="absolute inset-0 z-0">
@@ -111,8 +111,8 @@ export function HeroSection() {
             </div>
 
             {/* Redes sociales con estilo moderno */}
-            <div className="flex items-center gap-4 pt-4">
-              <span className="text-sm text-muted-foreground">Sígueme:</span>
+            <div className="flex items-center gap-4 mt-12 mb-8">
+              <span className="text-sm text-muted-foreground font-medium">Sígueme:</span>
               <div className="flex gap-3">
                 <Button
                   variant="ghost"
@@ -180,7 +180,7 @@ export function HeroSection() {
           <div className="flex justify-center lg:justify-end relative">
             <div className="relative w-full max-w-md">
               {/* Imagen principal estéticamente limpia con gradiente suave */}
-              <div className="relative aspect-[3/4] overflow-hidden flex items-end">
+              <div className="relative aspect-[3/4] overflow-hidden flex items-end mb-12">
                 <img
                   src={profileImage}
                   alt="Sabrina - Diseñadora Creativa"

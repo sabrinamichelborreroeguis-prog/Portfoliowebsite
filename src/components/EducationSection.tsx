@@ -36,10 +36,10 @@ export function EducationSection() {
   return (
     <section id="educacion" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 fade-in">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <GraduationCap className="h-8 w-8 text-purple-400" />
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+        <div className="text-center mb-20 fade-in">
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <GraduationCap className="h-10 w-10 text-purple-400" />
+            <h2 className="text-4xl md:text-6xl font-bold text-foreground tracking-tight">
               Educación y Formación
             </h2>
           </div>
