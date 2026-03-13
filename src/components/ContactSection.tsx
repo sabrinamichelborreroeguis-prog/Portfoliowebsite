@@ -169,7 +169,7 @@ ${formData.message}`;
             <CardHeader>
               <CardTitle className="text-2xl">Envíame un mensaje</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="pb-0">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div className="space-y-2">
