@@ -82,13 +82,13 @@ ${formData.message}`;
               Contáctame
             </h2>
           </div>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-4">
             ¿Tienes una idea o proyecto en mente? Me encantaría escuchar sobre ello.
             Conversemos sobre cómo puedo ayudarte a hacerlo realidad.
           </p>
         </div>
 
-        <div className="grid gap-12 lg:grid-cols-2">
+        <div className="grid gap-12 lg:grid-cols-2 mt-4">
           {/* Información de contacto */}
           <div className="space-y-8 slide-in-left">
             <div>

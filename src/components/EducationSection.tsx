@@ -43,13 +43,13 @@ export function EducationSection() {
               Educación y Formación
             </h2>
           </div>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-4">
             Mi trayectoria académica y certificaciones profesionales que respaldan
             mi experiencia en el sector tecnológico
           </p>
         </div>
 
-        <div className="grid gap-8 md:gap-12 md:grid-cols-2 mt-12 md:mt-20">
+        <div className="grid gap-8 md:gap-12 md:grid-cols-2 mt-4 md:mt-8">
           {educationData.map((item, index) => (
             <Card key={index} className="group glass-card border-border bg-card slide-up p-6 md:p-8" style={{ animationDelay: `${index * 0.1}s` }}>
               <CardContent className="p-0">

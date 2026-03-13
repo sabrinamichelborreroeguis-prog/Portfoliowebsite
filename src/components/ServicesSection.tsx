@@ -51,13 +51,13 @@ export function ServicesSection() {
               Mis Servicios
             </h2>
           </div>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-4">
             Ofrezco soluciones tecnológicas completas, desde el diseño hasta la implementación,
             adaptadas a las necesidades específicas de cada proyecto
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-4">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
