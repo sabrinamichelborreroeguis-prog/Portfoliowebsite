@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, ExternalLink, LayoutGrid } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
@@ -103,11 +103,12 @@ export function PortfolioPage() {
                     <span>Volver al inicio</span>
                 </div>
 
-                <div className="mb-12">
-                    <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-                        Mi <span className="text-gradient-purple">Portafolio</span>
+                <div className="mb-12 flex flex-col items-center justify-center gap-4 md:gap-6 text-center mt-8">
+                    <LayoutGrid className="h-8 w-8 md:h-12 md:w-12 text-purple-400 mb-1 md:mb-2" />
+                    <h1 className="text-2xl md:text-5xl font-bold text-foreground tracking-tight md:uppercase">
+                        Catálogo
                     </h1>
-                    <p className="text-lg text-muted-foreground max-w-2xl">
+                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
                         Explora de manera detallada mis trabajos agrupados por categorías, desde la dirección de arte hasta el modelado 3D y el diseño UI/UX.
                     </p>
                 </div>

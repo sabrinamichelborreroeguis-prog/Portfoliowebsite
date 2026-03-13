@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { Card, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -66,12 +66,6 @@ ${formData.message}`;
     }
   ];
 
-  const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" }
-  ];
-
   return (
     <section id="contacto" className="py-16 md:py-32 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -114,30 +108,6 @@ ${formData.message}`;
               </div>
             </div>
 
-            {/* Redes sociales */}
-            <div>
-              <h4 className="font-semibold text-foreground mb-4">Sígueme en</h4>
-              <div className="flex space-x-4">
-                {socialLinks.map((social, index) => {
-                  const IconComponent = social.icon;
-                  return (
-                    <Button
-                      key={index}
-                      variant="outline"
-                      size="sm"
-                      className="p-3"
-                      asChild
-                    >
-                      <a href={social.href} target="_blank" rel="noopener noreferrer">
-                        <IconComponent className="h-5 w-5" />
-                        <span className="sr-only">{social.label}</span>
-                      </a>
-                    </Button>
-                  );
-                })}
-              </div>
-            </div>
-
             {/* Disponibilidad */}
             <Card className="border-border glass-card">
               <CardHeader>
@@ -147,8 +117,8 @@ ${formData.message}`;
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-muted-foreground">Estado actual:</span>
-                    <span className="text-sm font-medium text-green-600 bg-green-50 px-2 py-1 rounded-full">
-                      Disponible
+                    <span className="text-sm font-medium text-green-100 bg-green-600/30 border border-green-500/50 px-3 py-1 rounded-full flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>Disponible
                     </span>
                   </div>
                   <div className="flex items-center justify-between">
@@ -173,7 +143,7 @@ ${formData.message}`;
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Nombre *</Label>
+                    <Label htmlFor="name">Nombre</Label>
                     <Input
                       id="name"
                       placeholder="Tu nombre completo"
@@ -184,7 +154,7 @@ ${formData.message}`;
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email *</Label>
+                    <Label htmlFor="email">Email</Label>
                     <Input
                       id="email"
                       type="email"
@@ -198,7 +168,7 @@ ${formData.message}`;
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="subject">Asunto *</Label>
+                  <Label htmlFor="subject">Asunto</Label>
                   <Input
                     id="subject"
                     placeholder="¿En qué puedo ayudarte?"
@@ -210,11 +180,11 @@ ${formData.message}`;
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="message">Mensaje *</Label>
+                  <Label htmlFor="message">Mensaje</Label>
                   <Textarea
                     id="message"
                     placeholder="Cuéntame más sobre tu proyecto o idea..."
-                    rows={6}
+                    rows={8}
                     required
                     value={formData.message}
                     onChange={handleInputChange}

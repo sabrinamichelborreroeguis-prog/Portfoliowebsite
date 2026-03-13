@@ -60,7 +60,7 @@ export function Header({ currentPage = 'home' }: HeaderProps) {
             </button>
             <button
               onClick={() => navigateToSection('portfolio')}
-              className={`transition-colors text-lg px-3 py-1.5 rounded-md ${currentPage === 'portfolio' ? 'text-white bg-purple-500/20 font-bold border border-purple-500/50' : 'text-purple-400 hover:text-purple-300 font-semibold border border-transparent'} galactic-breath`}
+              className={`transition-colors ${currentPage === 'portfolio' ? 'text-primary font-medium' : 'text-muted-foreground hover:text-primary'}`}
             >
               Portafolio
             </button>
@@ -107,7 +107,7 @@ export function Header({ currentPage = 'home' }: HeaderProps) {
               </button>
               <button
                 onClick={() => navigateToSection('portfolio')}
-                className={`block px-3 py-2 transition-colors w-full text-left ${currentPage === 'portfolio' ? 'text-purple-300 font-bold bg-purple-900/40 rounded' : 'text-purple-400 font-semibold hover:text-purple-300'}`}
+                className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors w-full text-left"
               >
                 Portafolio
               </button>

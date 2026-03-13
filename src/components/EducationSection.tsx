@@ -40,7 +40,7 @@ export function EducationSection() {
           <div className="flex flex-col items-center justify-center gap-4 md:gap-6 mb-8 md:mb-10">
             <GraduationCap className="h-8 w-8 md:h-12 md:w-12 text-purple-400 mb-1 md:mb-2" />
             <h2 className="text-2xl md:text-5xl font-bold text-foreground tracking-tight md:uppercase">
-              Educación y Formación
+              Educación e Información
             </h2>
           </div>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-4">

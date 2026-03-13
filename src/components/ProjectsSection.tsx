@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, FolderOpen } from 'lucide-react';
 import { Button } from './ui/button';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -40,40 +40,14 @@ export function ProjectsSection() {
 
       {/* Content */}
       <div
-        className={`relative z-10 w-full max-w-5xl mx-auto px-6 md:px-12 flex flex-col items-start transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+        className={`relative z-10 w-full max-w-5xl mx-auto px-6 md:px-12 flex flex-col items-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
       >
-        {/* Bordered title box */}
-        <div
-          className="w-full mb-5"
-          style={{
-            border: '2px solid rgba(120, 60, 255, 0.7)',
-            padding: '18px 32px',
-            boxShadow: '0 0 24px rgba(120,60,255,0.25), inset 0 0 20px rgba(120,60,255,0.06)',
-          }}
-        >
-          <h2
-            className="font-black text-white leading-none select-none"
-            style={{
-              fontSize: 'clamp(4rem, 12vw, 10rem)',
-              letterSpacing: '-0.02em',
-              textShadow: '0 0 40px rgba(160,80,255,0.3)',
-            }}
-          >
-            Portafolio
+        <div className="flex flex-col items-center justify-center gap-4 md:gap-6 mb-8 md:mb-10 text-center">
+          <FolderOpen className="h-8 w-8 md:h-12 md:w-12 text-purple-400 mb-1 md:mb-2" />
+          <h2 className="text-2xl md:text-5xl font-bold text-white tracking-tight md:uppercase">
+            Mis Proyectos
           </h2>
         </div>
-
-        {/* Name below box */}
-        <p
-          className="font-bold tracking-wide mb-10"
-          style={{
-            fontSize: 'clamp(1rem, 2.5vw, 1.5rem)',
-            color: '#a855f7',
-            letterSpacing: '0.05em',
-          }}
-        >
-          Sabrina Borrero Eguis
-        </p>
 
         {/* CTA Button - centered on the full width */}
         <div className="w-full flex justify-center">

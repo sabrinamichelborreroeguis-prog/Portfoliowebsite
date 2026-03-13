@@ -45,8 +45,8 @@ export function ServicesSection() {
     <section id="servicios" className="py-16 md:py-32 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20 md:mb-32 fade-in mt-12 md:mt-20">
-          <div className="flex flex-col items-center justify-center gap-8 md:gap-10 mb-10 md:mb-14">
-            <Sparkles className="h-8 w-8 md:h-12 md:w-12 text-purple-400 mb-4 md:mb-6" />
+          <div className="flex flex-col items-center justify-center gap-4 md:gap-6 mb-8 md:mb-10">
+            <Sparkles className="h-8 w-8 md:h-12 md:w-12 text-purple-400 mb-1 md:mb-2" />
             <h2 className="text-2xl md:text-5xl font-bold text-foreground tracking-tight md:uppercase">
               Mis Servicios
             </h2>
@@ -89,11 +89,11 @@ export function ServicesSection() {
         </div>
 
         <div className="mt-32 md:mt-56">
-          <div className="flex flex-col items-center justify-center gap-6 md:gap-8 mb-16 md:mb-24 fade-in delay-300">
-            <Zap className="h-8 w-8 md:h-12 md:w-12 text-purple-400 mb-2 md:mb-4" />
-            <h3 className="text-2xl md:text-5xl font-bold text-foreground tracking-tight md:uppercase">
+          <div className="flex flex-col items-center justify-center gap-4 md:gap-6 mb-8 md:mb-10 fade-in delay-300">
+            <Zap className="h-8 w-8 md:h-12 md:w-12 text-purple-400 mb-1 md:mb-2" />
+            <h2 className="text-2xl md:text-5xl font-bold text-foreground tracking-tight md:uppercase">
               Mi Proceso de Trabajo
-            </h3>
+            </h2>
           </div>
           <div className="grid gap-8 md:grid-cols-4">
             {[
