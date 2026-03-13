@@ -46,12 +46,12 @@ export function ProjectsSection() {
         ))}
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 relative z-10 w-full flex flex-col items-center justify-center">
+      <section id="portfolio" className="relative h-auto py-40 bg-[#0A001F] overflow-hidden flex flex-col items-center justify-center border-y border-purple-900/30">
         {/* Encabezado Estandarizado para Consistencia */}
-        <div className="w-full text-center mb-20 fade-in">
-          <div className="flex items-center justify-center gap-4 mb-8">
-            <Sparkles className="h-12 w-12 text-blue-400" />
-            <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
+        <div className="w-full text-center mb-28 fade-in">
+          <div className="flex flex-col items-center justify-center gap-6 mb-10">
+            <Sparkles className="h-14 w-14 text-blue-400 mb-2" />
+            <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tight uppercase">
               Mi Portafolio
             </h2>
           </div>

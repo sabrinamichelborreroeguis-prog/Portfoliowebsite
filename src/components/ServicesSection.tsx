@@ -42,16 +42,16 @@ export function ServicesSection() {
   ];
 
   return (
-    <section id="servicios" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="servicios" className="py-32 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-24 fade-in">
-          <div className="flex items-center justify-center gap-4 mb-8">
-            <Sparkles className="h-12 w-12 text-purple-400" />
-            <h2 className="text-5xl md:text-7xl font-bold text-foreground tracking-tight">
+        <div className="text-center mb-24 fade-in mt-12">
+          <div className="flex flex-col items-center justify-center gap-6 mb-10">
+            <Sparkles className="h-14 w-14 text-purple-400 mb-2" />
+            <h2 className="text-5xl md:text-7xl font-bold text-foreground tracking-tight uppercase">
               Mis Servicios
             </h2>
           </div>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Ofrezco soluciones tecnológicas completas, desde el diseño hasta la implementación,
             adaptadas a las necesidades específicas de cada proyecto
           </p>
@@ -61,7 +61,7 @@ export function ServicesSection() {
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <Card key={index} className="group glass-card-hover border-border bg-card slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
+              <Card key={index} className="group glass-card-hover border-border bg-card slide-up p-4" style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardHeader className="pb-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                     <IconComponent className="h-6 w-6 text-primary" />
@@ -88,10 +88,10 @@ export function ServicesSection() {
           })}
         </div>
 
-        <div className="mt-32">
-          <div className="flex items-center justify-center gap-4 mb-14 fade-in delay-300">
-            <Zap className="h-12 w-12 text-purple-400" />
-            <h3 className="text-5xl md:text-7xl font-bold text-foreground tracking-tight">
+        <div className="mt-40">
+          <div className="flex flex-col items-center justify-center gap-6 mb-16 fade-in delay-300">
+            <Zap className="h-14 w-14 text-purple-400 mb-2" />
+            <h3 className="text-5xl md:text-7xl font-bold text-foreground tracking-tight uppercase">
               Mi Proceso de Trabajo
             </h3>
           </div>

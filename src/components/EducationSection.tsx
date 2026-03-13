@@ -34,17 +34,18 @@ export function EducationSection() {
   ];
 
   return (
-    <section id="educacion" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+    <section id="educacion" className="py-32 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-24 fade-in">
-          <div className="flex items-center justify-center gap-4 mb-8">
-            <GraduationCap className="h-12 w-12 text-purple-400" />
-            <h2 className="text-5xl md:text-7xl font-bold text-foreground tracking-tight">
+        <div className="text-center mb-24 fade-in mt-12">
+          <div className="flex flex-col items-center justify-center gap-6 mb-10">
+            <GraduationCap className="h-14 w-14 text-purple-400 mb-2" />
+            <h2 className="text-5xl md:text-7xl font-bold text-foreground tracking-tight uppercase">
               Educación y Formación
             </h2>
           </div>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Mi trayectoria académica y profesional que respalda mi experiencia en las diferentes áreas.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Mi trayectoria académica y certificaciones profesionales que respaldan
+            mi experiencia en el sector tecnológico
           </p>
         </div>
 
