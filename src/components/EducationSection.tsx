@@ -38,8 +38,8 @@ export function EducationSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 md:mb-24 fade-in mt-8 md:mt-12">
           <div className="flex flex-col items-center justify-center gap-4 md:gap-6 mb-8 md:mb-10">
-            <GraduationCap className="h-10 w-10 md:h-14 md:w-14 text-purple-400 mb-1 md:mb-2" />
-            <h2 className="text-3xl md:text-7xl font-bold text-foreground tracking-tight md:uppercase">
+            <GraduationCap className="h-8 w-8 md:h-12 md:w-12 text-purple-400 mb-1 md:mb-2" />
+            <h2 className="text-2xl md:text-5xl font-bold text-foreground tracking-tight md:uppercase">
               Educación y Formación
             </h2>
           </div>
@@ -49,9 +49,9 @@ export function EducationSection() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-8 md:gap-12 md:grid-cols-2 mt-12 md:mt-20">
           {educationData.map((item, index) => (
-            <Card key={index} className="group glass-card border-border bg-card slide-up p-4 md:p-6" style={{ animationDelay: `${index * 0.1}s` }}>
+            <Card key={index} className="group glass-card border-border bg-card slide-up p-6 md:p-8" style={{ animationDelay: `${index * 0.1}s` }}>
               <CardContent className="p-0">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">

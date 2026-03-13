@@ -77,8 +77,8 @@ ${formData.message}`;
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 md:mb-24 fade-in mt-8 md:mt-12">
           <div className="flex flex-col items-center justify-center gap-4 md:gap-6 mb-8 md:mb-10">
-            <Mail className="h-10 w-10 md:h-14 md:w-14 text-purple-400 mb-1 md:mb-2" />
-            <h2 className="text-3xl md:text-7xl font-bold text-foreground tracking-tight md:uppercase">
+            <Mail className="h-8 w-8 md:h-12 md:w-12 text-purple-400 mb-1 md:mb-2" />
+            <h2 className="text-2xl md:text-5xl font-bold text-foreground tracking-tight md:uppercase">
               Contáctame
             </h2>
           </div>

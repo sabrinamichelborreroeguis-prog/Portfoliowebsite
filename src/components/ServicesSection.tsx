@@ -46,8 +46,8 @@ export function ServicesSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 md:mb-24 fade-in mt-8 md:mt-12">
           <div className="flex flex-col items-center justify-center gap-4 md:gap-6 mb-8 md:mb-10">
-            <Sparkles className="h-10 w-10 md:h-14 md:w-14 text-purple-400 mb-1 md:mb-2" />
-            <h2 className="text-3xl md:text-7xl font-bold text-foreground tracking-tight md:uppercase">
+            <Sparkles className="h-8 w-8 md:h-12 md:w-12 text-purple-400 mb-1 md:mb-2" />
+            <h2 className="text-2xl md:text-5xl font-bold text-foreground tracking-tight md:uppercase">
               Mis Servicios
             </h2>
           </div>
@@ -90,8 +90,8 @@ export function ServicesSection() {
 
         <div className="mt-24 md:mt-40">
           <div className="flex flex-col items-center justify-center gap-4 md:gap-6 mb-12 md:mb-16 fade-in delay-300">
-            <Zap className="h-10 w-10 md:h-14 md:w-14 text-purple-400 mb-1 md:mb-2" />
-            <h3 className="text-3xl md:text-7xl font-bold text-foreground tracking-tight md:uppercase">
+            <Zap className="h-8 w-8 md:h-12 md:w-12 text-purple-400 mb-1 md:mb-2" />
+            <h3 className="text-2xl md:text-5xl font-bold text-foreground tracking-tight md:uppercase">
               Mi Proceso de Trabajo
             </h3>
           </div>
