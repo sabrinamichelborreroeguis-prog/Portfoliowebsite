@@ -1,7 +1,7 @@
 
-  # Portfolio Website
+  # Portfolio 2026
 
-  This is a code bundle for Portfolio Website. The original project is available at https://www.figma.com/design/PmZ8RmKz956ymJR5VhcBWo/Portfolio-Website.
+  This is a code bundle for Portfolio 2026. The original project is available at https://www.figma.com/design/PmZ8RmKz956ymJR5VhcBWo/Portfolio-2026.
 
   ## Running the code
 
