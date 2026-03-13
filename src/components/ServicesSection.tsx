@@ -44,10 +44,10 @@ export function ServicesSection() {
   return (
     <section id="servicios" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20 fade-in">
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <Sparkles className="h-10 w-10 text-purple-400" />
-            <h2 className="text-4xl md:text-6xl font-bold text-foreground tracking-tight">
+        <div className="text-center mb-24 fade-in">
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <Sparkles className="h-12 w-12 text-purple-400" />
+            <h2 className="text-5xl md:text-7xl font-bold text-foreground tracking-tight">
               Mis Servicios
             </h2>
           </div>
@@ -88,10 +88,10 @@ export function ServicesSection() {
           })}
         </div>
 
-        <div className="mt-24">
-          <div className="flex items-center justify-center gap-4 mb-12 fade-in delay-300">
-            <Zap className="h-10 w-10 text-purple-400" />
-            <h3 className="text-4xl md:text-6xl font-bold text-foreground tracking-tight">
+        <div className="mt-32">
+          <div className="flex items-center justify-center gap-4 mb-14 fade-in delay-300">
+            <Zap className="h-12 w-12 text-purple-400" />
+            <h3 className="text-5xl md:text-7xl font-bold text-foreground tracking-tight">
               Mi Proceso de Trabajo
             </h3>
           </div>

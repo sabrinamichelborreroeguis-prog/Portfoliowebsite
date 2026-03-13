@@ -29,7 +29,7 @@ export function HeroSection() {
   return (
     <section
       id="inicio"
-      className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 relative overflow-hidden pb-32"
+      className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 relative overflow-hidden pb-48"
     >
       {/* Imagen de fondo con overlay */}
       <div className="absolute inset-0 z-0">
@@ -180,7 +180,7 @@ export function HeroSection() {
           <div className="flex justify-center lg:justify-end relative">
             <div className="relative w-full max-w-md">
               {/* Imagen principal estéticamente limpia con gradiente suave */}
-              <div className="relative aspect-[3/4] overflow-hidden flex items-end mb-12">
+              <div className="relative aspect-[3/4] overflow-hidden flex items-end mb-24">
                 <img
                   src={profileImage}
                   alt="Sabrina - Diseñadora Creativa"

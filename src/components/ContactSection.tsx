@@ -75,10 +75,10 @@ ${formData.message}`;
   return (
     <section id="contacto" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20 fade-in">
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <Mail className="h-10 w-10 text-purple-400" />
-            <h2 className="text-4xl md:text-6xl font-bold text-foreground tracking-tight">
+        <div className="text-center mb-24 fade-in">
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <Mail className="h-12 w-12 text-purple-400" />
+            <h2 className="text-5xl md:text-7xl font-bold text-foreground tracking-tight">
               Contáctame
             </h2>
           </div>
