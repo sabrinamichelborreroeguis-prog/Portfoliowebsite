@@ -82,9 +82,12 @@ ${formData.message}`;
     <section id="contacto" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Contáctame
-          </h2>
+          <div className="flex items-center justify-center mb-4">
+            <Mail className="h-8 w-8 text-primary mr-3" />
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              Contáctame
+            </h2>
+          </div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             ¿Tienes una idea o proyecto en mente? Me encantaría escuchar sobre ello.
             Conversemos sobre cómo puedo ayudarte a hacerlo realidad.
@@ -117,50 +120,29 @@ ${formData.message}`;
               </div>
             </div>
 
-            {/* Redes sociales */}
-            <div>
-              <h4 className="font-semibold text-foreground mb-4">Sígueme en</h4>
-              <div className="flex space-x-4">
-                {socialLinks.map((social, index) => {
-                  const IconComponent = social.icon;
-                  return (
-                    <Button
-                      key={index}
-                      variant="outline"
-                      size="sm"
-                      className="p-3"
-                      asChild
-                    >
-                      <a href={social.href} target="_blank" rel="noopener noreferrer">
-                        <IconComponent className="h-5 w-5" />
-                        <span className="sr-only">{social.label}</span>
-                      </a>
-                    </Button>
-                  );
-                })}
-              </div>
-            </div>
+            {/* Redes sociales eliminadas */}
 
             {/* Disponibilidad */}
-            <Card className="border-border glass-card">
-              <CardHeader>
-                <CardTitle className="text-lg">Disponibilidad</CardTitle>
+            <Card className="border-primary/20 bg-primary/5 glass-card">
+              <CardHeader pb-2>
+                <CardTitle className="text-xl text-primary">Disponibilidad</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-muted-foreground">Estado actual:</span>
-                    <span className="text-sm font-medium text-green-600 bg-green-50 px-2 py-1 rounded-full">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-medium text-foreground">Estado actual:</span>
+                    <span className="text-base font-bold text-green-600 bg-green-100 dark:bg-green-900/30 px-3 py-1.5 rounded-full flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
                       Disponible
                     </span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-muted-foreground">Tiempo de respuesta:</span>
-                    <span className="text-sm">24 horas</span>
+                    <span className="text-sm font-medium">24 horas</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-muted-foreground">Modalidad:</span>
-                    <span className="text-sm">Remoto/Híbrido</span>
+                    <span className="text-sm font-medium">Remoto/Híbrido</span>
                   </div>
                 </div>
               </CardContent>
@@ -176,7 +158,7 @@ ${formData.message}`;
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Nombre *</Label>
+                    <Label htmlFor="name">Nombre</Label>
                     <Input
                       id="name"
                       placeholder="Tu nombre completo"
@@ -187,7 +169,7 @@ ${formData.message}`;
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email *</Label>
+                    <Label htmlFor="email">Email</Label>
                     <Input
                       id="email"
                       type="email"
@@ -201,7 +183,7 @@ ${formData.message}`;
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="subject">Asunto *</Label>
+                  <Label htmlFor="subject">Asunto</Label>
                   <Input
                     id="subject"
                     placeholder="¿En qué puedo ayudarte?"
@@ -213,11 +195,11 @@ ${formData.message}`;
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="message">Mensaje *</Label>
+                  <Label htmlFor="message">Mensaje</Label>
                   <Textarea
                     id="message"
                     placeholder="Cuéntame más sobre tu proyecto o idea..."
-                    rows={6}
+                    rows={10}
                     required
                     value={formData.message}
                     onChange={handleInputChange}

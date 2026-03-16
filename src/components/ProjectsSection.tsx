@@ -1,4 +1,4 @@
-import { ExternalLink, ArrowRight } from 'lucide-react';
+import { ExternalLink, ArrowRight, FolderOpen } from 'lucide-react';
 import { Card, CardContent, CardHeader } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
@@ -6,6 +6,17 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 import { useEffect, useState } from 'react';
 import { ProjectCarousel } from './ProjectCarousel';
 import { ProjectDetailModal, Project } from './ProjectDetailModal';
+
+// UniSalamanca images
+import uniCover from '../assets/unisalamanca/cover.jpg';
+import uniMatriculate from '../assets/unisalamanca/matriculate.png';
+import uniMediosPago from '../assets/unisalamanca/medios-pago.png';
+import uniRuta from '../assets/unisalamanca/ruta.jpg';
+
+// InteBien images
+import intebienCover from '../assets/intebien/cover.png';
+import intebienMarketing from '../assets/intebien/marketing-digital.jpg';
+import intebienProgramacion from '../assets/intebien/programacion.jpg';
 
 export function ProjectsSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,7 +34,7 @@ export function ProjectsSection() {
   const projects: Project[] = [
     {
       title: "Loto del Sur",
-      description: "Lanzamiento del nuevo produto basado en la batalla de flores de Medellin.",
+      description: "Lanzamiento del nuevo producto basado en la batalla de flores de Medellín.",
       detailedDescription: "Campaña fotográfica completa para el lanzamiento del nuevo producto de Loto del Sur, inspirado en la icónica batalla de flores de Medellín. El proyecto incluyó dirección de arte, fotografía de producto, edición avanzada y estrategia de contenido para redes sociales, capturando la esencia vibrante y colorida de la cultura colombiana.",
       media: {
         type: "image",
@@ -96,7 +107,7 @@ export function ProjectsSection() {
     },
     {
       title: "Smiling",
-      description: "Idetidad de marca para Odontologia, con apertura en Barranquilla.",
+      description: "Identidad de marca para Odontología, con apertura en Barranquilla.",
       detailedDescription: "Desarrollo completo de identidad de marca para clínica odontológica en Barranquilla. El proyecto incluyó creación de branding desde cero, manual de marca, diseño de elementos visuales, fotografía corporativa y de instalaciones, garantizando una imagen profesional y confiable que transmite calidez y excelencia en servicios de salud dental.",
       media: {
         type: "image",
@@ -114,13 +125,13 @@ export function ProjectsSection() {
       ],
       technologies: ["Identidad de marca" , "Branding" , "Fotografia" , "Diseño"],
       type: "Proyecto Empresarial",
-      client: "Smilingt",
+      client: "Smiling",
       year: "2024",
       projectUrl: "https://www.behance.net/gallery/236794675/manual-de-narca-smilig"
     },
     {
       title: "Blender",
-      description: "Diseños en 3D, Creados para proyectos personales u estudiantiles.",
+      description: "Diseños en 3D, creados para proyectos personales y estudiantiles.",
       detailedDescription: "Colección de modelados y renders 3D creados con Blender para diversos proyectos personales y académicos. Explora diferentes técnicas de modelado, iluminación, texturizado y composición, demostrando versatilidad en la creación de escenas realistas y estilizadas en 3D.",
       media: {
         type: "image",
@@ -148,7 +159,7 @@ export function ProjectsSection() {
     },
     {
       title: "Marquesado de Saint Cyprien",
-      description: "Paquina web que proporciona información de lotes para residencias.",
+      description: "Página web que proporciona información de lotes para residencias.",
       detailedDescription: "Desarrollo de sitio web corporativo para club y resort de lujo. El proyecto incluyó diseño web en WordPress, programación PHP personalizada, integración de JavaScript para interactividad avanzada, y optimización de experiencia de usuario para presentar información de lotes residenciales de manera elegante y funcional.",
       media: {
         type: "image",
@@ -169,6 +180,58 @@ export function ProjectsSection() {
       client: "Club & Resort Marquesado de Saint Cyprien",
       year: "2024 - 2025",
       projectUrl: "https://marquisatdesaintcyprien.org"
+    },
+    {
+      title: "UniSalamanca",
+      description: "Corporación Universitaria Empresarial de Salamanca. Formación integral con enfoque empresarial, impacto regional y visión global.",
+      detailedDescription: "Creación de piezas gráficas para la Corporación Universitaria Empresarial de Salamanca (UniSalamanca). El proyecto incluyó diseño de contenido visual para redes sociales, campañas de matrícula, infografías informativas sobre rutas académicas y medios de pago, manteniendo la identidad visual institucional con una estética fresca y atractiva orientada al público universitario.",
+      media: {
+        type: "image",
+        url: uniCover
+      },
+      gallery: [
+        {
+          type: "image",
+          url: uniMatriculate
+        },
+        {
+          type: "image",
+          url: uniMediosPago
+        },
+        {
+          type: "image",
+          url: uniRuta
+        }
+      ],
+      technologies: ["Diseño Gráfico", "Redes Sociales", "Piezas Gráficas", "Branding"],
+      type: "Proyecto Empresarial",
+      client: "UniSalamanca",
+      year: "2026",
+      projectUrl: ""
+    },
+    {
+      title: "InteBien",
+      description: "Proyecto Educativo Institucional enfocado en el desarrollo de competencias específicas y desempeños esperados en Técnicos Laborales por Competencias.",
+      detailedDescription: "Diseño y producción de piezas gráficas para InteBien, Instituto Técnico de Formación Laboral para el Bienestar Social. El trabajo abarcó la creación de contenido visual para redes sociales promocionando sus programas de formación técnica laboral por competencias, incluyendo Marketing Digital y Programación y Desarrollo de Software, con una identidad visual vibrante y profesional.",
+      media: {
+        type: "image",
+        url: intebienCover
+      },
+      gallery: [
+        {
+          type: "image",
+          url: intebienMarketing
+        },
+        {
+          type: "image",
+          url: intebienProgramacion
+        }
+      ],
+      technologies: ["Diseño Gráfico", "Redes Sociales", "Piezas Gráficas", "Branding"],
+      type: "Proyecto Empresarial",
+      client: "InteBien",
+      year: "2026",
+      projectUrl: ""
     }
   ];
 
@@ -186,9 +249,12 @@ export function ProjectsSection() {
     <section id="proyectos" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="max-w-7xl mx-auto">
         <div className={`text-center mb-16 ${isVisible ? 'fade-in' : 'opacity-0'}`}>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Mis Proyectos
-          </h2>
+          <div className="flex items-center justify-center mb-4">
+            <FolderOpen className="h-8 w-8 text-primary mr-3" />
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              Mis Proyectos
+            </h2>
+          </div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Una selección de proyectos que demuestran mi experiencia y habilidades en diferentes tecnologías y sectores
           </p>

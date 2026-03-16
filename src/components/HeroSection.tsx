@@ -34,14 +34,13 @@ export function HeroSection() {
       className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 relative overflow-hidden"
     >
       {/* Imagen de fondo con overlay */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/40 z-10"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10"></div>
+      <div className="absolute inset-0 z-0 flex justify-end">
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/20 z-10"></div>
         <img
           src={profileImage}
           alt="Background"
-          className="w-full h-full object-cover opacity-40"
-          style={{ objectPosition: '70% center' }}
+          className="w-[80%] md:w-[60%] h-full object-cover object-[center_20%]"
         />
       </div>
 
@@ -52,10 +51,7 @@ export function HeroSection() {
             {/* Título principal con estilo cinematográfico */}
             <div className="space-y-4">
               <div className="flex items-center gap-3 mb-4">
-                <Badge className="bg-purple-500/90 text-white border-purple-400 px-3 py-1">
-                  PORTAFOLIO
-                </Badge>
-                <span className="text-sm text-muted-foreground">2025 | Diseño & Creatividad</span>
+                <span className="text-sm text-muted-foreground">PORTAFOLIO | 2025 | Diseño & Creatividad</span>
               </div>
               
               <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight" style={{ fontStyle: 'italic', letterSpacing: '-0.02em' }}>
@@ -69,10 +65,10 @@ export function HeroSection() {
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <span className="flex items-center gap-1">
                   <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                  Automatizadors
+                  Diseñadora Gráfica
                 </span>
                 <span>|</span>
-                <span>Diseñadora Gráfica</span>
+                <span>Automatizadora</span>
                 <span>|</span>
                 <span>UI/UX</span>
               </div>
@@ -81,7 +77,7 @@ export function HeroSection() {
             <p className="text-base text-muted-foreground max-w-lg leading-relaxed">
              Creo soluciones digitales funcionales y estéticas, combinando pensamiento estratégico,
               experiencia de usuario y tecnología para optimizar procesos, fortalecer marcas y construir
-              productos eficientes, intuitivos y escalables..
+              productos eficientes, intuitivos y escalables.
             </p>
 
             {/* Botones de acción principales */}
@@ -92,12 +88,12 @@ export function HeroSection() {
                 asChild
               >
                 <a 
-                  href={portfolioUrl} 
+                  href={cvUrl} 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
-                  <Play className="mr-2 h-5 w-5 fill-white" />
-                  Ver Proyectos
+                  <Download className="mr-2 h-5 w-5" />
+                  Descargar CV
                 </a>
               </Button>
               
@@ -112,112 +108,10 @@ export function HeroSection() {
               </Button>
             </div>
 
-            {/* Redes sociales con estilo moderno */}
-            <div className="flex items-center gap-4 pt-4">
-              <span className="text-sm text-muted-foreground">Sígueme:</span>
-              <div className="flex gap-3">
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
-                  className="p-3 hover:bg-purple-500/20 rounded-full" 
-                  asChild
-                >
-                  <a 
-                    href={githubUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    aria-label="GitHub"
-                  >
-                    <Github className="h-5 w-5" />
-                  </a>
-                </Button>
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
-                  className="p-3 hover:bg-purple-500/20 rounded-full" 
-                  asChild
-                >
-                  <a 
-                    href={linkedinUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn"
-                  >
-                    <Linkedin className="h-5 w-5" />
-                  </a>
-                </Button>
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
-                  className="p-3 hover:bg-purple-500/20 rounded-full" 
-                  asChild
-                >
-                  <a 
-                    href={`mailto:${emailUrl}`}
-                    aria-label="Email"
-                  >
-                    <Mail className="h-5 w-5" />
-                  </a>
-                </Button>
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
-                  className="p-3 hover:bg-green-500/20 rounded-full" 
-                  asChild
-                >
-                  <a 
-                    href={whatsappUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    aria-label="WhatsApp"
-                  >
-                    <MessageCircle className="h-5 w-5" />
-                  </a>
-                </Button>
-              </div>
-            </div>
           </div>
 
-          {/* Lado derecho - Imagen de perfil estilo cinematográfico */}
-          <div className="flex justify-center lg:justify-end relative">
-            <div className="relative w-full max-w-md">
-              {/* Imagen principal con border y efectos */}
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border-4 border-purple-500/30 shadow-2xl glow-purple-strong">
-                <img
-                  src={profileImage}
-                  alt="Sabrina - Diseñadora Creativa"
-                  className="w-full h-full object-cover"
-                  style={{ objectPosition: 'center 20%' }}
-                />
-                {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/60 via-transparent to-transparent"></div>
-                
-                {/* Info overlay en la parte inferior */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 glass-card border-0 rounded-none">
-                  <h3 className="text-foreground mb-1">Sabrina Borrero</h3>
-                  <p className="text-sm text-muted-foreground mb-3">Diseñadora Creativa</p>
-                  <Button 
-                    size="sm"
-                    className="w-full bg-[#C3A8FF] hover:bg-[#B59BE5] text-white"
-                    asChild
-                  >
-                    <a 
-                      href={cvUrl} 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Download className="mr-2 h-4 w-4" />
-                      Descargar CV
-                    </a>
-                  </Button>
-                </div>
-              </div>
-
-              {/* Efectos de luz decorativos */}
-              <div className="absolute -top-8 -right-8 w-40 h-40 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-violet-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-            </div>
-          </div>
+          {/* Lado derecho vaciado para mostrar el fondo integrado */}
+          <div className="hidden lg:block"></div>
         </div>
       </div>
 

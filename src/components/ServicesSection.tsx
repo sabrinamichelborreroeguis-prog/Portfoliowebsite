@@ -1,4 +1,4 @@
-import { Code, Smartphone, Palette, Globe, Database, Zap } from 'lucide-react';
+import { Code, Smartphone, Palette, Globe, Database, Zap, Briefcase, Settings } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 
 export function ServicesSection() {
@@ -23,7 +23,7 @@ export function ServicesSection() {
     },
     {
       icon: Globe,
-      title: "Diseño de Idetidad de Marca",
+      title: "Diseño de Identidad de Marca",
       description: "Desarrollo de identidad de marca visuales e impresas, para el mejoramiento de la empresa o emprendimiento,",
       features: ["Marca", "Branding", "Litografia", "Imprenta"]
     },
@@ -45,9 +45,12 @@ export function ServicesSection() {
     <section id="servicios" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Mis Servicios
-          </h2>
+          <div className="flex items-center justify-center mb-4">
+            <Briefcase className="h-8 w-8 text-primary mr-3" />
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              Mis Servicios
+            </h2>
+          </div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Ofrezco soluciones tecnológicas completas, desde el diseño hasta la implementación,
             adaptadas a las necesidades específicas de cada proyecto
@@ -87,9 +90,12 @@ export function ServicesSection() {
 
         {/* Proceso de trabajo */}
         <div className="mt-20">
-          <h3 className="text-2xl font-bold text-foreground text-center mb-12 fade-in delay-300">
-            Mi Proceso de Trabajo
-          </h3>
+          <div className="flex items-center justify-center mb-12 fade-in delay-300">
+            <Settings className="h-8 w-8 text-primary mr-3" />
+            <h3 className="text-3xl md:text-4xl font-bold text-foreground text-center">
+              Mi Proceso de Trabajo
+            </h3>
+          </div>
           <div className="grid gap-8 md:grid-cols-4">
             {[
               { step: "01", title: "Análisis", description: "Entendimiento profundo de tus necesidades y objetivos" },
