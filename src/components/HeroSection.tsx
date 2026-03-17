@@ -105,13 +105,13 @@ export function HeroSection() {
 
           </div>
 
-          {/* Lado derecho - Imagen principal con animaciones - Grande (800px alto) */}
-          <div className="relative group w-full max-w-md lg:max-w-none lg:w-[640px] mx-auto lg:ml-auto mt-12 lg:mt-0 perspective-1000">
+          {/* Lado derecho - Imagen principal con animaciones - 600px alto con degradado morado */}
+          <div className="relative group w-full max-w-sm lg:max-w-none lg:w-[480px] mx-auto lg:ml-auto mt-12 lg:mt-0 perspective-1000">
             {/* Destello sutil en la parte de atrás - Ajustado para ser más elegante */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/10 to-blue-500/5 rounded-3xl blur-[120px] transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-1000 ease-out"></div>
+            <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/10 to-blue-500/5 rounded-3xl blur-[100px] transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-1000 ease-out"></div>
             
             {/* Cuadro contenedor */}
-            <div className="relative z-10 w-full lg:h-[800px] aspect-[4/5] rounded-[3rem] overflow-hidden border border-white/5 bg-black/10 backdrop-blur-sm shadow-2xl transition-all duration-700 ease-out transform group-hover:-translate-y-4 group-hover:shadow-[0_60px_100px_-20px_rgba(168,85,247,0.3)] group-hover:border-purple-500/10">
+            <div className="relative z-10 w-full lg:h-[600px] aspect-[4/5] rounded-[2.5rem] overflow-hidden border border-white/5 bg-black/10 backdrop-blur-sm shadow-2xl transition-all duration-700 ease-out transform group-hover:-translate-y-4 group-hover:shadow-[0_50px_90px_-20px_rgba(168,85,247,0.25)] group-hover:border-purple-500/10">
               
               {/* Imagen con zoom sutil */}
               <img
@@ -120,18 +120,18 @@ export function HeroSection() {
                 className="w-full h-full object-cover object-[center_15%] transition-transform duration-1000 ease-out group-hover:scale-105"
               />
 
-              {/* Degradado sutil persistente en la parte inferior para fundir la base */}
-              <div className="absolute inset-x-0 bottom-0 h-1/6 bg-gradient-to-t from-background via-background/60 to-transparent z-10"></div>
+              {/* Degradado morado sutil persistente en la parte inferior para fundir la base */}
+              <div className="absolute inset-x-0 bottom-0 h-1/5 bg-gradient-to-t from-background via-purple-500/15 to-transparent z-10"></div>
 
               {/* Overlay interactivo (se aclara al pasar el cursor) */}
               <div className="absolute inset-0 bg-black/5 opacity-100 group-hover:opacity-0 transition-opacity duration-700 ease-in-out z-20"></div>
               
               {/* Marcos decorativos animados minimalistas */}
-              <div className="absolute inset-10 border border-white/5 rounded-[2.5rem] opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transition-all duration-1000 ease-out delay-100 pointer-events-none z-30"></div>
+              <div className="absolute inset-8 border border-white/5 rounded-[2rem] opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transition-all duration-1000 ease-out delay-100 pointer-events-none z-30"></div>
               
-              <div className="absolute bottom-12 left-8 right-8 translate-y-10 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out delay-200 flex justify-center z-30">
-                <Badge variant="secondary" className="bg-white/5 backdrop-blur-xl border border-white/10 text-[10px] uppercase tracking-widest px-6 py-2 shadow-2xl pointer-events-none text-white whitespace-nowrap">
-                  <Play className="w-3 h-3 mr-2 text-purple-400 fill-purple-400" /> Curaduría Digital
+              <div className="absolute bottom-10 left-6 right-6 translate-y-10 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out delay-200 flex justify-center z-30">
+                <Badge variant="secondary" className="bg-white/5 backdrop-blur-xl border border-white/10 text-[9px] uppercase tracking-widest px-5 py-1.5 shadow-2xl pointer-events-none text-white whitespace-nowrap">
+                  <Play className="w-2.5 h-2.5 mr-2 text-purple-400 fill-purple-400" /> Curaduría Digital
                 </Badge>
               </div>
             </div>
