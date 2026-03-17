@@ -106,7 +106,7 @@ export function HeroSection() {
           </div>
 
           {/* Lado derecho - Imagen principal con animaciones - Proporcional al texto */}
-          <div className="relative group w-full max-w-[300px] lg:max-w-[320px] mx-auto lg:ml-auto mt-12 lg:mt-0 perspective-1000">
+          <div className="relative group w-full max-w-[240px] lg:max-w-[260px] mx-auto lg:ml-auto mt-12 lg:mt-0 perspective-1000">
             {/* Destello sutil en la parte de atrás - Ajustado para ser más elegante */}
             <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/10 to-blue-500/5 rounded-3xl blur-[100px] transform group-hover:scale-125 group-hover:rotate-3 transition-all duration-1000 ease-out"></div>
             
@@ -120,8 +120,8 @@ export function HeroSection() {
                 className="w-full h-full object-cover object-[center_15%] transition-transform duration-1000 ease-out group-hover:scale-110"
               />
 
-              {/* Degradado sutil persistente en la parte inferior para fundir la base - Hecho más suave y alto */}
-              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-background via-background/40 to-transparent z-10"></div>
+              {/* Degradado sutil persistente en la parte inferior para fundir la base - Hecho más pequeño */}
+              <div className="absolute inset-x-0 bottom-0 h-1/5 bg-gradient-to-t from-background via-background/60 to-transparent z-10"></div>
 
               {/* Overlay interactivo (se aclara al pasar el cursor) */}
               <div className="absolute inset-0 bg-black/5 opacity-100 group-hover:opacity-0 transition-opacity duration-700 ease-in-out z-20"></div>
