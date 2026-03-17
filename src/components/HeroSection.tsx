@@ -105,33 +105,33 @@ export function HeroSection() {
 
           </div>
 
-          {/* Lado derecho - Imagen principal con animaciones - Proporcional al texto */}
-          <div className="relative group w-full max-w-[180px] lg:max-w-[200px] mx-auto lg:ml-auto mt-12 lg:mt-0 perspective-1000">
+          {/* Lado derecho - Imagen principal con animaciones - Grande (800px alto) */}
+          <div className="relative group w-full max-w-md lg:max-w-none lg:w-[640px] mx-auto lg:ml-auto mt-12 lg:mt-0 perspective-1000">
             {/* Destello sutil en la parte de atrás - Ajustado para ser más elegante */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/10 to-blue-500/5 rounded-3xl blur-[100px] transform group-hover:scale-125 group-hover:rotate-3 transition-all duration-1000 ease-out"></div>
+            <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/10 to-blue-500/5 rounded-3xl blur-[120px] transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-1000 ease-out"></div>
             
             {/* Cuadro contenedor */}
-            <div className="relative z-10 w-full aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/5 bg-black/10 backdrop-blur-sm shadow-2xl transition-all duration-700 ease-out transform group-hover:-translate-y-3 group-hover:shadow-[0_40px_80px_-20px_rgba(168,85,247,0.2)] group-hover:border-purple-500/10">
+            <div className="relative z-10 w-full lg:h-[800px] aspect-[4/5] rounded-[3rem] overflow-hidden border border-white/5 bg-black/10 backdrop-blur-sm shadow-2xl transition-all duration-700 ease-out transform group-hover:-translate-y-4 group-hover:shadow-[0_60px_100px_-20px_rgba(168,85,247,0.3)] group-hover:border-purple-500/10">
               
               {/* Imagen con zoom sutil */}
               <img
                 src={profileImage}
                 alt="Sabrina Borrero Eguis"
-                className="w-full h-full object-cover object-[center_15%] transition-transform duration-1000 ease-out group-hover:scale-110"
+                className="w-full h-full object-cover object-[center_15%] transition-transform duration-1000 ease-out group-hover:scale-105"
               />
 
-              {/* Degradado sutil persistente en la parte inferior para fundir la base - Mínimo */}
-              <div className="absolute inset-x-0 bottom-0 h-1/8 bg-gradient-to-t from-background via-background/80 to-transparent z-10"></div>
+              {/* Degradado sutil persistente en la parte inferior para fundir la base */}
+              <div className="absolute inset-x-0 bottom-0 h-1/6 bg-gradient-to-t from-background via-background/60 to-transparent z-10"></div>
 
               {/* Overlay interactivo (se aclara al pasar el cursor) */}
               <div className="absolute inset-0 bg-black/5 opacity-100 group-hover:opacity-0 transition-opacity duration-700 ease-in-out z-20"></div>
               
               {/* Marcos decorativos animados minimalistas */}
-              <div className="absolute inset-6 border border-white/5 rounded-2xl opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 transition-all duration-1000 ease-out delay-100 pointer-events-none z-30"></div>
+              <div className="absolute inset-10 border border-white/5 rounded-[2.5rem] opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transition-all duration-1000 ease-out delay-100 pointer-events-none z-30"></div>
               
-              <div className="absolute bottom-6 left-4 right-4 translate-y-10 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out delay-200 flex justify-center z-30">
-                <Badge variant="secondary" className="bg-white/5 backdrop-blur-xl border border-white/10 text-[8px] uppercase tracking-widest px-3 py-1 shadow-2xl pointer-events-none text-white whitespace-nowrap">
-                  Curaduría Digital
+              <div className="absolute bottom-12 left-8 right-8 translate-y-10 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out delay-200 flex justify-center z-30">
+                <Badge variant="secondary" className="bg-white/5 backdrop-blur-xl border border-white/10 text-[10px] uppercase tracking-widest px-6 py-2 shadow-2xl pointer-events-none text-white whitespace-nowrap">
+                  <Play className="w-3 h-3 mr-2 text-purple-400 fill-purple-400" /> Curaduría Digital
                 </Badge>
               </div>
             </div>
