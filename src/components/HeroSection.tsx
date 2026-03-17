@@ -105,13 +105,16 @@ export function HeroSection() {
 
           </div>
 
-          {/* Lado derecho - Imagen principal con animaciones - 350px alto (Proporcional al texto) y degradado morado fuerte */}
-          <div className="relative group w-full max-w-[280px] lg:max-w-none lg:w-[280px] mx-auto lg:ml-auto mt-12 lg:mt-0 perspective-1000">
+          {/* Lado derecho - Imagen principal con animaciones - Tamaño FORZADO a 350px para ser proporcional al texto */}
+          <div className="relative group mx-auto lg:ml-auto mt-12 lg:mt-0 perspective-1000" style={{ width: '280px' }}>
             {/* Destello sutil en la parte de atrás - Ajustado para ser más elegante */}
             <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/10 to-blue-500/5 rounded-3xl blur-[80px] transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-1000 ease-out"></div>
             
-            {/* Cuadro contenedor */}
-            <div className="relative z-10 w-full lg:h-[350px] aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/5 bg-black/10 backdrop-blur-sm shadow-2xl transition-all duration-700 ease-out transform group-hover:-translate-y-2 group-hover:shadow-[0_40px_80px_-20px_rgba(168,85,247,0.3)] group-hover:border-purple-500/20">
+            {/* Cuadro contenedor con altura y ancho fijos para garantizar proporcionalidad */}
+            <div 
+              className="relative z-10 rounded-[2rem] overflow-hidden border border-white/5 bg-black/10 backdrop-blur-sm shadow-2xl transition-all duration-700 ease-out transform group-hover:-translate-y-2 group-hover:shadow-[0_40px_80px_-20px_rgba(168,85,247,0.4)] group-hover:border-purple-500/30"
+              style={{ width: '280px', height: '350px' }}
+            >
               
               {/* Imagen con zoom sutil */}
               <img
@@ -120,8 +123,14 @@ export function HeroSection() {
                 className="w-full h-full object-cover object-[center_15%] transition-transform duration-1000 ease-out group-hover:scale-105"
               />
 
-              {/* Degradado morado FUERTE y visible en la parte inferior */}
-              <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-background via-purple-600/30 to-transparent z-40"></div>
+              {/* Degradado morado VISIBLE en la parte inferior */}
+              <div 
+                className="absolute inset-x-0 bottom-0 z-40" 
+                style={{ 
+                  height: '30%', 
+                  background: 'linear-gradient(to top, #0f0a1f 0%, rgba(147, 51, 234, 0.4) 40%, transparent 100%)' 
+                }}
+              ></div>
 
               {/* Overlay interactivo (se aclara al pasar el cursor) */}
               <div className="absolute inset-0 bg-black/5 opacity-100 group-hover:opacity-0 transition-opacity duration-700 ease-in-out z-20"></div>
