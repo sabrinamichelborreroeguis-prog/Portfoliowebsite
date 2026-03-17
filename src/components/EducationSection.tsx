@@ -4,21 +4,21 @@ import { Card, CardContent } from './ui/card';
 export function EducationSection() {
   const educationData = [
     {
-      title: "Tecnica Profesional En Producción Grafica y Multimedial",
+      title: "Tecnica Profesional En Producción Gráfica y Multimedial",
       institution: "Institución Universitaria de Barranquilla",
       period: "2022 - 2023",
       status: "Graduado",
-      description: "Fundamentos en Ilustración, Fotografia, Edicion y Retoque Fotografico.",
+      description: "Fundamentos en Ilustración, Fotografía, Edicion y Retoque Fotografico.",
     },
     {
       title: "Auditora Interna en el Sistema de Gestión de Calidad",
       institution: "Centro Empresarial Buenavista - Icontec - ISO 9001:2015",
       period: "2023",
       status: "Completado",
-      description: "Auditora Enfocada a la Mejora del Desempeño de la Organizacón, con Fundamento en la ISO 9001:2015.",
+      description: "Auditora Enfocada a la Mejora del Desempeño de la Organización, con Fundamento en la ISO 9001:2015.",
     },
     {
-      title: "Tecnologia en producción Grafica y Multimedial",
+      title: "Tecnologia en producción Gráfica y Multimedial",
       institution: "Institución Universitaria de Barranquilla",
       period: "2025",
       status: "Cursando",
@@ -97,7 +97,7 @@ export function EducationSection() {
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-primary mb-2">3+</div>
-            <div className="text-sm text-muted-foreground">Esperiencia labora</div>
+            <div className="text-sm text-muted-foreground">Experiencia Laboral</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-primary mb-2">100%</div>
